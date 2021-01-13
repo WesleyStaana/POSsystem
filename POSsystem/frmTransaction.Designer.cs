@@ -209,6 +209,7 @@
             this.btnAddItem.TabIndex = 14;
             this.btnAddItem.Text = "Add Item";
             this.btnAddItem.UseVisualStyleBackColor = true;
+            this.btnAddItem.Click += new System.EventHandler(this.btnAddItem_Click);
             // 
             // btnRemove
             // 
@@ -239,6 +240,7 @@
             this.btnPayment.TabIndex = 17;
             this.btnPayment.Text = "Payment";
             this.btnPayment.UseVisualStyleBackColor = true;
+            this.btnPayment.Click += new System.EventHandler(this.btnPayment_Click);
             // 
             // btnClose
             // 
@@ -249,6 +251,7 @@
             this.btnClose.TabIndex = 18;
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // dataGridViewTransaction
             // 
@@ -306,6 +309,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(770, 513);
             this.Controls.Add(this.dataGridViewTransaction);
@@ -328,6 +332,8 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.labelUser);
             this.Controls.Add(this.label1);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmTransaction";
             this.Text = "Transaction";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTransaction)).EndInit();

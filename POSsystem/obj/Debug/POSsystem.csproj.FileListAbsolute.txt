@@ -19,3 +19,24 @@ C:\Users\artou\source\repos\POSsystem\POSsystem\bin\Debug\POSsystem.exe
 C:\Users\artou\source\repos\POSsystem\POSsystem\bin\Debug\POSsystem.pdb
 C:\Users\artou\source\repos\POSsystem\POSsystem\obj\Debug\POSsystem.exe
 C:\Users\artou\source\repos\POSsystem\POSsystem\obj\Debug\POSsystem.pdb
+C:\Users\Maureen Quizon\Desktop\POSsystem\POSsystem\bin\Debug\POSsystem.exe.config
+C:\Users\Maureen Quizon\Desktop\POSsystem\POSsystem\bin\Debug\POSsystem.exe
+C:\Users\Maureen Quizon\Desktop\POSsystem\POSsystem\bin\Debug\POSsystem.pdb
+C:\Users\Maureen Quizon\Desktop\POSsystem\POSsystem\obj\Debug\POSsystem.csprojAssemblyReference.cache
+C:\Users\Maureen Quizon\Desktop\POSsystem\POSsystem\obj\Debug\POSsystem.frmItemAddItem.resources
+C:\Users\Maureen Quizon\Desktop\POSsystem\POSsystem\obj\Debug\POSsystem.frmCategory.resources
+C:\Users\Maureen Quizon\Desktop\POSsystem\POSsystem\obj\Debug\POSsystem.frmItems.resources
+C:\Users\Maureen Quizon\Desktop\POSsystem\POSsystem\obj\Debug\POSsystem.Form1.resources
+C:\Users\Maureen Quizon\Desktop\POSsystem\POSsystem\obj\Debug\POSsystem.Form2.resources
+C:\Users\Maureen Quizon\Desktop\POSsystem\POSsystem\obj\Debug\POSsystem.frmPosition.resources
+C:\Users\Maureen Quizon\Desktop\POSsystem\POSsystem\obj\Debug\POSsystem.frmReceipt.resources
+C:\Users\Maureen Quizon\Desktop\POSsystem\POSsystem\obj\Debug\POSsystem.frmStaff.resources
+C:\Users\Maureen Quizon\Desktop\POSsystem\POSsystem\obj\Debug\POSsystem.frmTransaction.resources
+C:\Users\Maureen Quizon\Desktop\POSsystem\POSsystem\obj\Debug\POSsystem.frmTransactionAddItem.resources
+C:\Users\Maureen Quizon\Desktop\POSsystem\POSsystem\obj\Debug\POSsystem.frmTransactionPayment.resources
+C:\Users\Maureen Quizon\Desktop\POSsystem\POSsystem\obj\Debug\POSsystem.frmUser.resources
+C:\Users\Maureen Quizon\Desktop\POSsystem\POSsystem\obj\Debug\POSsystem.Properties.Resources.resources
+C:\Users\Maureen Quizon\Desktop\POSsystem\POSsystem\obj\Debug\POSsystem.csproj.GenerateResource.cache
+C:\Users\Maureen Quizon\Desktop\POSsystem\POSsystem\obj\Debug\POSsystem.csproj.CoreCompileInputs.cache
+C:\Users\Maureen Quizon\Desktop\POSsystem\POSsystem\obj\Debug\POSsystem.exe
+C:\Users\Maureen Quizon\Desktop\POSsystem\POSsystem\obj\Debug\POSsystem.pdb

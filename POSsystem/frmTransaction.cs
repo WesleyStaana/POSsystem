@@ -26,5 +26,22 @@ namespace POSsystem
         {
 
         }
+
+        private void btnPayment_Click(object sender, EventArgs e)
+        {
+            frmTransactionPayment toPay = new frmTransactionPayment();
+            toPay.Show();
+        }
+
+        private void btnAddItem_Click(object sender, EventArgs e)
+        {
+            frmTransactionAddItem toAdd = new frmTransactionAddItem();
+            toAdd.Show();
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
     }
 }

@@ -159,6 +159,7 @@
             this.btnCancel.TabIndex = 5;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // cmbCategory
             // 
@@ -210,10 +211,11 @@
             this.txtReproduceLevel.Size = new System.Drawing.Size(121, 20);
             this.txtReproduceLevel.TabIndex = 12;
             // 
-            // frmAddItem
+            // frmItemAddItem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(653, 403);
             this.Controls.Add(this.txtReproduceLevel);
@@ -234,7 +236,9 @@
             this.Controls.Add(this.lblCategory);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "frmAddItem";
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.Name = "frmItemAddItem";
             this.Text = "AddItem";
             this.ResumeLayout(false);
             this.PerformLayout();

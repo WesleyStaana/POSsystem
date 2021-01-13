@@ -105,6 +105,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(220, 192);
             this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.label3);
@@ -113,6 +114,8 @@
             this.Controls.Add(this.txtChange);
             this.Controls.Add(this.txtCash);
             this.Controls.Add(this.txtTotalAmount);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmTransactionPayment";
             this.Text = "frmTransactionPayment";
             this.ResumeLayout(false);

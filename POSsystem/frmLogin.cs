@@ -16,5 +16,23 @@ namespace POSsystem
         {
             InitializeComponent();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            string username = txtUsername.Text;
+            string password = txtPassword.Text;
+
+            if (username == "admin" && password == "admin")
+            {
+                this.Hide();
+                Form2 f2 = new Form2();
+                f2.Show();
+            }
+        }
     }
 }

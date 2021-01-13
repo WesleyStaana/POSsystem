@@ -143,11 +143,13 @@
             this.btnClose.TabIndex = 9;
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // frmPosition
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(552, 223);
             this.Controls.Add(this.btnClose);
@@ -160,6 +162,8 @@
             this.Controls.Add(this.lblPositionNo);
             this.Controls.Add(this.dataGridViewPosition);
             this.Controls.Add(this.label1);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmPosition";
             this.Text = "Position";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPosition)).EndInit();

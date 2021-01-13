@@ -26,13 +26,17 @@ namespace POSsystem
         {
             string username = txtUsername.Text;
             string password = txtPassword.Text;
-
-            if (username == "admin" && password == "admin")
-            {
+            
+            if (username == "admin" && password == "admin") {
                 this.Hide();
                 Form2 f2 = new Form2();
                 f2.Show();
-            }
+             }
+        }
+
+        private void txtPassword_KeyDown(object sender, KeyEventArgs e)
+        {
+            btnLogin.PerformClick();
         }
     }
 }

@@ -21,5 +21,11 @@ namespace POSsystem
         {
 
         }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            frmItemAddItem addItem = new frmItemAddItem();
+            addItem.Show();
+        }
     }
 }

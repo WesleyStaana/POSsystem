@@ -2,7 +2,6 @@ C:\Users\artou\source\repos\POSsystem\POSsystem\obj\Debug\POSsystem.csprojAssemb
 C:\Users\artou\source\repos\POSsystem\POSsystem\obj\Debug\POSsystem.frmItemAddItem.resources
 C:\Users\artou\source\repos\POSsystem\POSsystem\obj\Debug\POSsystem.frmCategory.resources
 C:\Users\artou\source\repos\POSsystem\POSsystem\obj\Debug\POSsystem.frmItems.resources
-C:\Users\artou\source\repos\POSsystem\POSsystem\obj\Debug\POSsystem.Form1.resources
 C:\Users\artou\source\repos\POSsystem\POSsystem\obj\Debug\POSsystem.Form2.resources
 C:\Users\artou\source\repos\POSsystem\POSsystem\obj\Debug\POSsystem.frmPosition.resources
 C:\Users\artou\source\repos\POSsystem\POSsystem\obj\Debug\POSsystem.frmReceipt.resources
@@ -40,3 +39,4 @@ C:\Users\Maureen Quizon\Desktop\POSsystem\POSsystem\obj\Debug\POSsystem.csproj.G
 C:\Users\Maureen Quizon\Desktop\POSsystem\POSsystem\obj\Debug\POSsystem.csproj.CoreCompileInputs.cache
 C:\Users\Maureen Quizon\Desktop\POSsystem\POSsystem\obj\Debug\POSsystem.exe
 C:\Users\Maureen Quizon\Desktop\POSsystem\POSsystem\obj\Debug\POSsystem.pdb
+C:\Users\artou\source\repos\POSsystem\POSsystem\obj\Debug\POSsystem.frmLogin.resources

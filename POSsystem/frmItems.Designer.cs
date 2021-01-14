@@ -51,6 +51,7 @@
             // 
             this.lblSearch.AutoSize = true;
             this.lblSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSearch.ForeColor = System.Drawing.SystemColors.Control;
             this.lblSearch.Location = new System.Drawing.Point(12, 36);
             this.lblSearch.Name = "lblSearch";
             this.lblSearch.Size = new System.Drawing.Size(54, 16);
@@ -66,31 +67,34 @@
             // 
             // btnAdd
             // 
+            this.btnAdd.BackColor = System.Drawing.Color.Cyan;
             this.btnAdd.Location = new System.Drawing.Point(284, 32);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(75, 23);
             this.btnAdd.TabIndex = 2;
             this.btnAdd.Text = "Add";
-            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.UseVisualStyleBackColor = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnUpdate
             // 
+            this.btnUpdate.BackColor = System.Drawing.Color.Cyan;
             this.btnUpdate.Location = new System.Drawing.Point(365, 32);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(75, 23);
             this.btnUpdate.TabIndex = 3;
             this.btnUpdate.Text = "Update";
-            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.UseVisualStyleBackColor = false;
             // 
             // btnStockIn
             // 
+            this.btnStockIn.BackColor = System.Drawing.Color.Cyan;
             this.btnStockIn.Location = new System.Drawing.Point(446, 33);
             this.btnStockIn.Name = "btnStockIn";
             this.btnStockIn.Size = new System.Drawing.Size(75, 23);
             this.btnStockIn.TabIndex = 4;
             this.btnStockIn.Text = "Stock In";
-            this.btnStockIn.UseVisualStyleBackColor = true;
+            this.btnStockIn.UseVisualStyleBackColor = false;
             // 
             // dataGridViewItems
             // 
@@ -113,7 +117,7 @@
             this.Column2,
             this.Column3,
             this.Column4});
-            this.dataGridViewItems.GridColor = System.Drawing.Color.DeepSkyBlue;
+            this.dataGridViewItems.GridColor = System.Drawing.Color.Cyan;
             this.dataGridViewItems.Location = new System.Drawing.Point(1, 132);
             this.dataGridViewItems.Name = "dataGridViewItems";
             this.dataGridViewItems.ReadOnly = true;
@@ -164,6 +168,7 @@
             // 
             this.lblCritical.AutoSize = true;
             this.lblCritical.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCritical.ForeColor = System.Drawing.SystemColors.Control;
             this.lblCritical.Location = new System.Drawing.Point(69, 93);
             this.lblCritical.Name = "lblCritical";
             this.lblCritical.Size = new System.Drawing.Size(168, 16);
@@ -174,6 +179,7 @@
             // 
             this.lblStable.AutoSize = true;
             this.lblStable.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStable.ForeColor = System.Drawing.SystemColors.Control;
             this.lblStable.Location = new System.Drawing.Point(324, 93);
             this.lblStable.Name = "lblStable";
             this.lblStable.Size = new System.Drawing.Size(165, 16);
@@ -185,7 +191,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.BackColor = System.Drawing.SystemColors.GrayText;
             this.ClientSize = new System.Drawing.Size(533, 450);
             this.Controls.Add(this.lblStable);
             this.Controls.Add(this.lblCritical);

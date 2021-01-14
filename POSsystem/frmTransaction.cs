@@ -43,5 +43,10 @@ namespace POSsystem
         {
             this.Hide();
         }
+
+        private void frmTransaction_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            
+        }
     }
 }

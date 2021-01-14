@@ -51,5 +51,11 @@ namespace POSsystem
             frmTransaction transact = new frmTransaction();
             transact.Show();
         }
+
+        private void Form2_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            frmLogin login = new frmLogin();
+            login.Show();
+        }
     }
 }

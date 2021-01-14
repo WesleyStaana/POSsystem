@@ -21,5 +21,16 @@ namespace POSsystem
         {
 
         }
+
+        private void frmReceipt_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            frmLogin login = new frmLogin();
+            login.Show();
+        }
+
+        private void frmReceipt_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

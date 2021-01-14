@@ -62,7 +62,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Cyan;
+            this.label1.ForeColor = System.Drawing.Color.DodgerBlue;
             this.label1.Location = new System.Drawing.Point(74, 26);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(420, 37);
@@ -205,7 +205,9 @@
             // 
             // btnNewTransaction
             // 
-            this.btnNewTransaction.BackColor = System.Drawing.Color.Cyan;
+            this.btnNewTransaction.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnNewTransaction.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnNewTransaction.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnNewTransaction.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNewTransaction.Location = new System.Drawing.Point(612, 290);
             this.btnNewTransaction.Name = "btnNewTransaction";
@@ -216,7 +218,9 @@
             // 
             // btnAddItem
             // 
-            this.btnAddItem.BackColor = System.Drawing.Color.Cyan;
+            this.btnAddItem.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnAddItem.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAddItem.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAddItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddItem.Location = new System.Drawing.Point(612, 319);
             this.btnAddItem.Name = "btnAddItem";
@@ -228,7 +232,9 @@
             // 
             // btnRemove
             // 
-            this.btnRemove.BackColor = System.Drawing.Color.Cyan;
+            this.btnRemove.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnRemove.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRemove.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnRemove.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRemove.Location = new System.Drawing.Point(612, 348);
             this.btnRemove.Name = "btnRemove";
@@ -239,7 +245,9 @@
             // 
             // btnDiscount
             // 
-            this.btnDiscount.BackColor = System.Drawing.Color.Cyan;
+            this.btnDiscount.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnDiscount.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDiscount.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnDiscount.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDiscount.Location = new System.Drawing.Point(612, 377);
             this.btnDiscount.Name = "btnDiscount";
@@ -250,7 +258,9 @@
             // 
             // btnPayment
             // 
-            this.btnPayment.BackColor = System.Drawing.Color.Cyan;
+            this.btnPayment.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnPayment.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPayment.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnPayment.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPayment.Location = new System.Drawing.Point(612, 406);
             this.btnPayment.Name = "btnPayment";
@@ -262,7 +272,9 @@
             // 
             // btnClose
             // 
-            this.btnClose.BackColor = System.Drawing.Color.Cyan;
+            this.btnClose.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClose.Location = new System.Drawing.Point(612, 467);
             this.btnClose.Name = "btnClose";

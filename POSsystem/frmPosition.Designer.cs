@@ -47,7 +47,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Cyan;
+            this.label1.ForeColor = System.Drawing.Color.DodgerBlue;
             this.label1.Location = new System.Drawing.Point(12, 19);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(119, 31);
@@ -115,7 +115,9 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.BackColor = System.Drawing.Color.Cyan;
+            this.btnAdd.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnAdd.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAdd.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnAdd.Location = new System.Drawing.Point(266, 165);
             this.btnAdd.Name = "btnAdd";
@@ -126,7 +128,9 @@
             // 
             // btnUpdate
             // 
-            this.btnUpdate.BackColor = System.Drawing.Color.Cyan;
+            this.btnUpdate.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnUpdate.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnUpdate.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnUpdate.Location = new System.Drawing.Point(333, 165);
             this.btnUpdate.Name = "btnUpdate";
@@ -137,7 +141,9 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.BackColor = System.Drawing.Color.Cyan;
+            this.btnDelete.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnDelete.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnDelete.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnDelete.Location = new System.Drawing.Point(397, 165);
             this.btnDelete.Name = "btnDelete";
@@ -148,7 +154,9 @@
             // 
             // btnClose
             // 
-            this.btnClose.BackColor = System.Drawing.Color.Cyan;
+            this.btnClose.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnClose.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnClose.Location = new System.Drawing.Point(457, 165);
             this.btnClose.Name = "btnClose";

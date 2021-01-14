@@ -97,7 +97,9 @@
             // 
             // btnSubmit
             // 
-            this.btnSubmit.BackColor = System.Drawing.Color.Cyan;
+            this.btnSubmit.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnSubmit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSubmit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSubmit.Location = new System.Drawing.Point(39, 157);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(141, 32);

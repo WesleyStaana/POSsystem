@@ -124,7 +124,9 @@
             // 
             // btnAddtoCart
             // 
-            this.btnAddtoCart.BackColor = System.Drawing.Color.Cyan;
+            this.btnAddtoCart.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnAddtoCart.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAddtoCart.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAddtoCart.Location = new System.Drawing.Point(221, 155);
             this.btnAddtoCart.Name = "btnAddtoCart";
             this.btnAddtoCart.Size = new System.Drawing.Size(58, 101);

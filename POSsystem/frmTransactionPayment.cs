@@ -36,5 +36,12 @@ namespace POSsystem
         {
 
         }
+
+        private void btnSubmit_Click(object sender, EventArgs e)
+        {
+            frmReceipt receipt = new frmReceipt();
+            receipt.Show();
+
+        }
     }
 }

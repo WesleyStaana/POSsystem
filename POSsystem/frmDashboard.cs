@@ -57,5 +57,18 @@ namespace POSsystem
             frmLogin login = new frmLogin();
             login.Show();
         }
+
+        private void Form2_Load(object sender, EventArgs e)
+        {
+            timer1.Start();
+            lblDate.Text = DateTime.Now.ToLongDateString();
+            lblTime.Text = DateTime.Now.ToLongTimeString();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            lblTime.Text = DateTime.Now.ToLongTimeString();
+            timer1.Start();
+        }
     }
 }

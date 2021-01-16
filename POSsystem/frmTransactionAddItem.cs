@@ -16,5 +16,11 @@ namespace POSsystem
         {
             InitializeComponent();
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            frmItems item = new frmItems();
+            item.Show();
+        }
     }
 }

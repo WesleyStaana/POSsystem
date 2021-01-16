@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTransactionPayment));
             this.txtTotalAmount = new System.Windows.Forms.TextBox();
             this.txtCash = new System.Windows.Forms.TextBox();
             this.txtChange = new System.Windows.Forms.TextBox();
@@ -100,7 +101,7 @@
             this.btnSubmit.BackColor = System.Drawing.Color.DodgerBlue;
             this.btnSubmit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSubmit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnSubmit.Location = new System.Drawing.Point(39, 157);
+            this.btnSubmit.Location = new System.Drawing.Point(39, 150);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(141, 32);
             this.btnSubmit.TabIndex = 6;
@@ -122,6 +123,7 @@
             this.Controls.Add(this.txtChange);
             this.Controls.Add(this.txtCash);
             this.Controls.Add(this.txtTotalAmount);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmTransactionPayment";

@@ -185,5 +185,9 @@
   <ItemGroup>
     <Folder Include="Maintenance\" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logitech_logo.svg.png" />
+    <None Include="Resources\unnamed1.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

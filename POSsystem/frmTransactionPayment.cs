@@ -41,7 +41,7 @@ namespace POSsystem
         {
             frmReceipt receipt = new frmReceipt();
             receipt.Show();
-
+            this.Hide();
         }
     }
 }

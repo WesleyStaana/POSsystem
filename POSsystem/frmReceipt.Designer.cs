@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmReceipt));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -65,7 +66,6 @@
             this.label1.Size = new System.Drawing.Size(292, 37);
             this.label1.TabIndex = 0;
             this.label1.Text = "-------------------------";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -335,12 +335,11 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmReceipt";
             this.Text = "frmReceipt";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmReceipt_FormClosed);
-            this.Load += new System.EventHandler(this.frmReceipt_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

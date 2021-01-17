@@ -132,7 +132,6 @@
             this.Controls.Add(this.dataGridViewUser);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.MinimizeBox = false;
             this.Name = "frmUser";
             this.Text = "User";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUser)).EndInit();

@@ -125,7 +125,6 @@
             this.Controls.Add(this.txtTotalAmount);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.MinimizeBox = false;
             this.Name = "frmTransactionPayment";
             this.Text = "frmTransactionPayment";
             this.ResumeLayout(false);

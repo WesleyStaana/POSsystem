@@ -101,11 +101,11 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(74, 448);
+            this.label5.Location = new System.Drawing.Point(67, 459);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(122, 25);
+            this.label5.Size = new System.Drawing.Size(129, 25);
             this.label5.TabIndex = 4;
-            this.label5.Text = "Thankyou!";
+            this.label5.Text = "Thank you!";
             // 
             // label6
             // 

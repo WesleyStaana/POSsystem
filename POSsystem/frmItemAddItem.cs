@@ -26,5 +26,19 @@ namespace POSsystem
         {
             this.Hide();
         }
+
+        private void frmItemAddItem_Load(object sender, EventArgs e)
+        {
+            string[] Category = new string[] {
+                "Mouse",
+                "Keyboard",
+                "Headset",
+                "Mousepad"
+            };
+            for (int i = 0; i < 4; i++)
+            {
+                cbCategory.Items.Add(Category[i].ToString());
+            }
+        }
     }
 }

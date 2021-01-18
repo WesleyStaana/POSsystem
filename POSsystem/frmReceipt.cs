@@ -16,5 +16,12 @@ namespace POSsystem
         {
             InitializeComponent();
         }
+
+        private void frmReceipt_Load(object sender, EventArgs e)
+        {
+            lblTotal.Text = frmTransactionPayment.total.ToString();
+            lblCash.Text = frmTransactionPayment.cash.ToString();
+            lblChange.Text = frmTransactionPayment.change.ToString();
+        }
     }
 }

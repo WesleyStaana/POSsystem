@@ -55,8 +55,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTransaction)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblDate
@@ -301,14 +303,23 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.GrayText;
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::POSsystem.Properties.Resources.Logitech_logo_svg;
-            this.pictureBox1.Location = new System.Drawing.Point(26, 18);
+            this.pictureBox1.Location = new System.Drawing.Point(28, 11);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(719, 78);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 20;
             this.pictureBox1.TabStop = false;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.DodgerBlue;
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Location = new System.Drawing.Point(-1, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(772, 100);
+            this.panel1.TabIndex = 23;
             // 
             // frmTransaction
             // 
@@ -317,9 +328,9 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.SystemColors.GrayText;
             this.ClientSize = new System.Drawing.Size(770, 518);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.dataGridViewTransaction);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnPayment);
@@ -343,6 +354,7 @@
             this.Load += new System.EventHandler(this.frmTransaction_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTransaction)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -374,5 +386,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Panel panel1;
     }
 }

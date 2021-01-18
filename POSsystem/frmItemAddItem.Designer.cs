@@ -40,7 +40,7 @@
             this.lblReproduceLevel = new System.Windows.Forms.Label();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
-            this.cmbCategory = new System.Windows.Forms.ComboBox();
+            this.cbCategory = new System.Windows.Forms.ComboBox();
             this.txtCode = new System.Windows.Forms.TextBox();
             this.txtDescription = new System.Windows.Forms.TextBox();
             this.txtSize = new System.Windows.Forms.TextBox();
@@ -177,13 +177,14 @@
             this.btnCancel.UseVisualStyleBackColor = false;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
-            // cmbCategory
+            // cbCategory
             // 
-            this.cmbCategory.FormattingEnabled = true;
-            this.cmbCategory.Location = new System.Drawing.Point(105, 119);
-            this.cmbCategory.Name = "cmbCategory";
-            this.cmbCategory.Size = new System.Drawing.Size(136, 21);
-            this.cmbCategory.TabIndex = 6;
+            this.cbCategory.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cbCategory.FormattingEnabled = true;
+            this.cbCategory.Location = new System.Drawing.Point(105, 119);
+            this.cbCategory.Name = "cbCategory";
+            this.cbCategory.Size = new System.Drawing.Size(136, 21);
+            this.cbCategory.TabIndex = 6;
             // 
             // txtCode
             // 
@@ -240,7 +241,7 @@
             this.Controls.Add(this.txtSize);
             this.Controls.Add(this.txtDescription);
             this.Controls.Add(this.txtCode);
-            this.Controls.Add(this.cmbCategory);
+            this.Controls.Add(this.cbCategory);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.lblUnitPrice);
@@ -257,6 +258,7 @@
             this.Name = "frmItemAddItem";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddItem";
+            this.Load += new System.EventHandler(this.frmItemAddItem_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -275,7 +277,7 @@
         private System.Windows.Forms.Label lblReproduceLevel;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnCancel;
-        private System.Windows.Forms.ComboBox cmbCategory;
+        private System.Windows.Forms.ComboBox cbCategory;
         private System.Windows.Forms.TextBox txtCode;
         private System.Windows.Forms.TextBox txtDescription;
         private System.Windows.Forms.TextBox txtSize;

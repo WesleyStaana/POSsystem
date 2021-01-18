@@ -46,7 +46,7 @@
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnLogin.Location = new System.Drawing.Point(146, 152);
+            this.btnLogin.Location = new System.Drawing.Point(123, 150);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(117, 25);
             this.btnLogin.TabIndex = 0;
@@ -96,9 +96,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::POSsystem.Properties.Resources.Logitech_logo_svg;
-            this.pictureBox1.Location = new System.Drawing.Point(36, 15);
+            this.pictureBox1.Location = new System.Drawing.Point(0, 15);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(287, 45);
+            this.pictureBox1.Size = new System.Drawing.Size(366, 45);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;

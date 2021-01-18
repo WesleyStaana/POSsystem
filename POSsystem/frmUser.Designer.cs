@@ -30,14 +30,14 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmUser));
             this.dataGridViewUser = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblSearch = new System.Windows.Forms.Label();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUser)).BeginInit();
             this.SuspendLayout();
             // 
@@ -55,26 +55,6 @@
             this.dataGridViewUser.RowHeadersVisible = false;
             this.dataGridViewUser.Size = new System.Drawing.Size(467, 241);
             this.dataGridViewUser.TabIndex = 0;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "ID No";
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Name";
-            this.Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Position";
-            this.Column3.Name = "Column3";
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Username";
-            this.Column4.Name = "Column4";
             // 
             // lblSearch
             // 
@@ -118,6 +98,28 @@
             this.btnUpdate.TabIndex = 4;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = false;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "ID No";
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 120;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Name";
+            this.Column2.Name = "Column2";
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Position";
+            this.Column3.Name = "Column3";
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Username";
+            this.Column4.Name = "Column4";
+            this.Column4.Width = 150;
             // 
             // frmUser
             // 

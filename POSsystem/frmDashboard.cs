@@ -34,12 +34,6 @@ namespace POSsystem
             position.Show();
         }
 
-        private void categoryToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            frmCategory category = new frmCategory();
-            category.Show();
-        }
-
         private void itemsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmItems items = new frmItems();
@@ -69,6 +63,36 @@ namespace POSsystem
         {
             lblTime.Text = DateTime.Now.ToLongTimeString();
             timer1.Start();
+        }
+
+        private void lblLogout_MouseHover(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void lblLogout_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmLogin login = new frmLogin();
+            login.Show();
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            frmMouse mouse = new frmMouse();
+            mouse.Show();
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            frmKeyboard keyboard = new frmKeyboard();
+            keyboard.Show();
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            frmHeadset headset = new frmHeadset();
+            headset.Show();
         }
     }
 }

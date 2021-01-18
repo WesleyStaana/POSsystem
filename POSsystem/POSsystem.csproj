@@ -46,23 +46,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmHeadset.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHeadset.Designer.cs">
+      <DependentUpon>frmHeadset.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmItemAddItem.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmItemAddItem.Designer.cs">
       <DependentUpon>frmItemAddItem.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmCategory.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmCategory.Designer.cs">
-      <DependentUpon>frmCategory.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmItems.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmItems.Designer.cs">
       <DependentUpon>frmItems.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmKeyboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmKeyboard.Designer.cs">
+      <DependentUpon>frmKeyboard.cs</DependentUpon>
     </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
@@ -75,6 +81,12 @@
     </Compile>
     <Compile Include="frmDashboard.Designer.cs">
       <DependentUpon>frmDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMouse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMouse.Designer.cs">
+      <DependentUpon>frmMouse.cs</DependentUpon>
     </Compile>
     <Compile Include="frmPosition.cs">
       <SubType>Form</SubType>
@@ -120,20 +132,26 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmHeadset.resx">
+      <DependentUpon>frmHeadset.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmItemAddItem.resx">
       <DependentUpon>frmItemAddItem.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmCategory.resx">
-      <DependentUpon>frmCategory.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmItems.resx">
       <DependentUpon>frmItems.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmKeyboard.resx">
+      <DependentUpon>frmKeyboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmDashboard.resx">
       <DependentUpon>frmDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMouse.resx">
+      <DependentUpon>frmMouse.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPosition.resx">
       <DependentUpon>frmPosition.cs</DependentUpon>
@@ -188,6 +206,15 @@
   <ItemGroup>
     <None Include="Resources\Logitech_logo.svg.png" />
     <None Include="Resources\unnamed1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\20273-8-logitech-gaming-keyboard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imgbin_microphone-logitech-g231-prodigy-headset-headphones-png.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imgbin_computer-mouse-logitech-gaming-mouse-g-pro-electronic-sports-video-game-png.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

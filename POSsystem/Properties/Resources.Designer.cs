@@ -63,9 +63,40 @@ namespace POSsystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _20273_8_logitech_gaming_keyboard {
+            get {
+                object obj = ResourceManager.GetObject("20273-8-logitech-gaming-keyboard", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap folder {
             get {
                 object obj = ResourceManager.GetObject("folder", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap imgbin_computer_mouse_logitech_gaming_mouse_g_pro_electronic_sports_video_game_png {
+            get {
+                object obj = ResourceManager.GetObject("imgbin_computer-mouse-logitech-gaming-mouse-g-pro-electronic-sports-video-game-pn" +
+                        "g", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap imgbin_microphone_logitech_g231_prodigy_headset_headphones_png {
+            get {
+                object obj = ResourceManager.GetObject("imgbin_microphone-logitech-g231-prodigy-headset-headphones-png", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -10,17 +10,11 @@ using System.Windows.Forms;
 
 namespace POSsystem
 {
-    public partial class frmUser : Form
+    public partial class frmMouse : Form
     {
-        public frmUser()
+        public frmMouse()
         {
             InitializeComponent();
-        }
-
-        private void btnAdd_Click(object sender, EventArgs e)
-        {
-            frmStaff staff = new frmStaff();
-            staff.Show();
         }
     }
 }

@@ -339,7 +339,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmReceipt";
-            this.Text = "frmReceipt";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.ResumeLayout(false);
             this.PerformLayout();
 

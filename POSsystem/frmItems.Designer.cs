@@ -127,7 +127,7 @@
             this.Column3,
             this.Column4});
             this.dataGridViewItems.GridColor = System.Drawing.Color.DodgerBlue;
-            this.dataGridViewItems.Location = new System.Drawing.Point(1, 132);
+            this.dataGridViewItems.Location = new System.Drawing.Point(56, 125);
             this.dataGridViewItems.Name = "dataGridViewItems";
             this.dataGridViewItems.ReadOnly = true;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -145,7 +145,7 @@
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
             this.dataGridViewItems.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridViewItems.RowTemplate.Height = 18;
-            this.dataGridViewItems.Size = new System.Drawing.Size(533, 316);
+            this.dataGridViewItems.Size = new System.Drawing.Size(424, 316);
             this.dataGridViewItems.TabIndex = 5;
             // 
             // Column1
@@ -238,6 +238,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "frmItems";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Items";
             this.Load += new System.EventHandler(this.frmItems_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewItems)).EndInit();

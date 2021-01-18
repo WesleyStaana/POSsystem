@@ -48,5 +48,18 @@ namespace POSsystem
         {
             
         }
+
+        private void frmTransaction_Load(object sender, EventArgs e)
+        {
+            timer1.Start();
+            label2.Text = DateTime.Now.ToLongDateString();
+            label1.Text = DateTime.Now.ToLongTimeString();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            label1.Text = DateTime.Now.ToLongTimeString();
+            timer1.Start();
+        }
     }
 }

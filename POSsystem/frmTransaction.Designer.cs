@@ -28,11 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTransaction));
-            this.labelUser = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.lblUser = new System.Windows.Forms.Label();
-            this.lblPosition = new System.Windows.Forms.Label();
             this.lblDate = new System.Windows.Forms.Label();
             this.lblTime = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -44,7 +41,6 @@
             this.btnNewTransaction = new System.Windows.Forms.Button();
             this.btnAddItem = new System.Windows.Forms.Button();
             this.btnRemove = new System.Windows.Forms.Button();
-            this.btnDiscount = new System.Windows.Forms.Button();
             this.btnPayment = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
             this.dataGridViewTransaction = new System.Windows.Forms.DataGridView();
@@ -55,54 +51,13 @@
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTransaction)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // labelUser
-            // 
-            this.labelUser.AutoSize = true;
-            this.labelUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelUser.ForeColor = System.Drawing.SystemColors.Control;
-            this.labelUser.Location = new System.Drawing.Point(550, 26);
-            this.labelUser.Name = "labelUser";
-            this.labelUser.Size = new System.Drawing.Size(40, 16);
-            this.labelUser.TabIndex = 1;
-            this.labelUser.Text = "User:";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.Control;
-            this.label3.Location = new System.Drawing.Point(531, 59);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(59, 16);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Position:";
-            // 
-            // lblUser
-            // 
-            this.lblUser.AutoSize = true;
-            this.lblUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUser.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblUser.Location = new System.Drawing.Point(603, 28);
-            this.lblUser.Name = "lblUser";
-            this.lblUser.Size = new System.Drawing.Size(45, 16);
-            this.lblUser.TabIndex = 3;
-            this.lblUser.Text = "label4";
-            // 
-            // lblPosition
-            // 
-            this.lblPosition.AutoSize = true;
-            this.lblPosition.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPosition.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblPosition.Location = new System.Drawing.Point(603, 61);
-            this.lblPosition.Name = "lblPosition";
-            this.lblPosition.Size = new System.Drawing.Size(45, 16);
-            this.lblPosition.TabIndex = 4;
-            this.lblPosition.Text = "label5";
             // 
             // lblDate
             // 
@@ -168,9 +123,9 @@
             this.lblDiscount.ForeColor = System.Drawing.SystemColors.Control;
             this.lblDiscount.Location = new System.Drawing.Point(612, 122);
             this.lblDiscount.Name = "lblDiscount";
-            this.lblDiscount.Size = new System.Drawing.Size(72, 20);
+            this.lblDiscount.Size = new System.Drawing.Size(36, 20);
             this.lblDiscount.TabIndex = 10;
-            this.lblDiscount.Text = "Discount";
+            this.lblDiscount.Text = "0 %";
             // 
             // label12
             // 
@@ -188,7 +143,7 @@
             this.lblTotal.AutoSize = true;
             this.lblTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotal.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblTotal.Location = new System.Drawing.Point(678, 202);
+            this.lblTotal.Location = new System.Drawing.Point(663, 193);
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Size = new System.Drawing.Size(67, 31);
             this.lblTotal.TabIndex = 12;
@@ -200,7 +155,7 @@
             this.btnNewTransaction.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnNewTransaction.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnNewTransaction.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNewTransaction.Location = new System.Drawing.Point(612, 290);
+            this.btnNewTransaction.Location = new System.Drawing.Point(618, 290);
             this.btnNewTransaction.Name = "btnNewTransaction";
             this.btnNewTransaction.Size = new System.Drawing.Size(146, 23);
             this.btnNewTransaction.TabIndex = 13;
@@ -213,7 +168,7 @@
             this.btnAddItem.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAddItem.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAddItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddItem.Location = new System.Drawing.Point(612, 319);
+            this.btnAddItem.Location = new System.Drawing.Point(618, 319);
             this.btnAddItem.Name = "btnAddItem";
             this.btnAddItem.Size = new System.Drawing.Size(146, 23);
             this.btnAddItem.TabIndex = 14;
@@ -227,25 +182,12 @@
             this.btnRemove.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRemove.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnRemove.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRemove.Location = new System.Drawing.Point(612, 348);
+            this.btnRemove.Location = new System.Drawing.Point(618, 348);
             this.btnRemove.Name = "btnRemove";
             this.btnRemove.Size = new System.Drawing.Size(146, 23);
             this.btnRemove.TabIndex = 15;
             this.btnRemove.Text = "Remove";
             this.btnRemove.UseVisualStyleBackColor = false;
-            // 
-            // btnDiscount
-            // 
-            this.btnDiscount.BackColor = System.Drawing.Color.DodgerBlue;
-            this.btnDiscount.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDiscount.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnDiscount.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDiscount.Location = new System.Drawing.Point(612, 377);
-            this.btnDiscount.Name = "btnDiscount";
-            this.btnDiscount.Size = new System.Drawing.Size(146, 23);
-            this.btnDiscount.TabIndex = 16;
-            this.btnDiscount.Text = "Discount";
-            this.btnDiscount.UseVisualStyleBackColor = false;
             // 
             // btnPayment
             // 
@@ -253,7 +195,7 @@
             this.btnPayment.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPayment.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnPayment.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPayment.Location = new System.Drawing.Point(612, 406);
+            this.btnPayment.Location = new System.Drawing.Point(618, 377);
             this.btnPayment.Name = "btnPayment";
             this.btnPayment.Size = new System.Drawing.Size(146, 23);
             this.btnPayment.TabIndex = 17;
@@ -267,7 +209,7 @@
             this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClose.Location = new System.Drawing.Point(612, 467);
+            this.btnClose.Location = new System.Drawing.Point(618, 467);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(146, 23);
             this.btnClose.TabIndex = 18;
@@ -287,7 +229,7 @@
             this.Column5,
             this.Column6,
             this.Column7});
-            this.dataGridViewTransaction.Location = new System.Drawing.Point(-8, 248);
+            this.dataGridViewTransaction.Location = new System.Drawing.Point(-1, 246);
             this.dataGridViewTransaction.Name = "dataGridViewTransaction";
             this.dataGridViewTransaction.RowHeadersVisible = false;
             this.dataGridViewTransaction.Size = new System.Drawing.Size(614, 271);
@@ -329,12 +271,41 @@
             this.Column7.HeaderText = "Total";
             this.Column7.Name = "Column7";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.SystemColors.GrayText;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.Control;
+            this.label1.Location = new System.Drawing.Point(349, 121);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(43, 16);
+            this.label1.TabIndex = 22;
+            this.label1.Text = "Time";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.SystemColors.GrayText;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.Control;
+            this.label2.Location = new System.Drawing.Point(76, 121);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(41, 16);
+            this.label2.TabIndex = 21;
+            this.label2.Text = "Date";
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // pictureBox1
             // 
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.GrayText;
             this.pictureBox1.Image = global::POSsystem.Properties.Resources.Logitech_logo_svg;
-            this.pictureBox1.Location = new System.Drawing.Point(26, 26);
+            this.pictureBox1.Location = new System.Drawing.Point(26, 18);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(369, 78);
+            this.pictureBox1.Size = new System.Drawing.Size(719, 78);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 20;
             this.pictureBox1.TabStop = false;
@@ -345,12 +316,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.SystemColors.GrayText;
-            this.ClientSize = new System.Drawing.Size(770, 513);
+            this.ClientSize = new System.Drawing.Size(770, 518);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.dataGridViewTransaction);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnPayment);
-            this.Controls.Add(this.btnDiscount);
             this.Controls.Add(this.btnRemove);
             this.Controls.Add(this.btnAddItem);
             this.Controls.Add(this.btnNewTransaction);
@@ -362,15 +334,13 @@
             this.Controls.Add(this.label8);
             this.Controls.Add(this.lblTime);
             this.Controls.Add(this.lblDate);
-            this.Controls.Add(this.lblPosition);
-            this.Controls.Add(this.lblUser);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.labelUser);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "frmTransaction";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Transaction";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmTransaction_FormClosed);
+            this.Load += new System.EventHandler(this.frmTransaction_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTransaction)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -379,10 +349,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.Label labelUser;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label lblUser;
-        private System.Windows.Forms.Label lblPosition;
         private System.Windows.Forms.Label lblDate;
         private System.Windows.Forms.Label lblTime;
         private System.Windows.Forms.Label label8;
@@ -394,7 +360,6 @@
         private System.Windows.Forms.Button btnNewTransaction;
         private System.Windows.Forms.Button btnAddItem;
         private System.Windows.Forms.Button btnRemove;
-        private System.Windows.Forms.Button btnDiscount;
         private System.Windows.Forms.Button btnPayment;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.DataGridView dataGridViewTransaction;
@@ -406,5 +371,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Timer timer1;
     }
 }

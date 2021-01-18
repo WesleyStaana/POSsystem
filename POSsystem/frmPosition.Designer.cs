@@ -65,7 +65,7 @@
             this.dataGridViewPosition.Location = new System.Drawing.Point(12, 72);
             this.dataGridViewPosition.Name = "dataGridViewPosition";
             this.dataGridViewPosition.RowHeadersVisible = false;
-            this.dataGridViewPosition.Size = new System.Drawing.Size(243, 124);
+            this.dataGridViewPosition.Size = new System.Drawing.Size(204, 124);
             this.dataGridViewPosition.TabIndex = 1;
             // 
             // Column1
@@ -187,6 +187,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "frmPosition";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Position";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPosition)).EndInit();
             this.ResumeLayout(false);

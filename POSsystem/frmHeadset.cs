@@ -10,17 +10,11 @@ using System.Windows.Forms;
 
 namespace POSsystem
 {
-    public partial class frmUser : Form
+    public partial class frmHeadset : Form
     {
-        public frmUser()
+        public frmHeadset()
         {
             InitializeComponent();
-        }
-
-        private void btnAdd_Click(object sender, EventArgs e)
-        {
-            frmStaff staff = new frmStaff();
-            staff.Show();
         }
     }
 }

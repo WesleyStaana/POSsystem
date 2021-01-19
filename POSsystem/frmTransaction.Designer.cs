@@ -32,10 +32,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTransaction));
             this.lblDate = new System.Windows.Forms.Label();
             this.lblTime = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.lblInvoice = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.lblDiscount = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.lblTotal = new System.Windows.Forms.Label();
             this.btnNewTransaction = new System.Windows.Forms.Button();
@@ -55,8 +51,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTransaction)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblDate
@@ -64,7 +62,7 @@
             this.lblDate.AutoSize = true;
             this.lblDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDate.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblDate.Location = new System.Drawing.Point(22, 118);
+            this.lblDate.Location = new System.Drawing.Point(15, 434);
             this.lblDate.Name = "lblDate";
             this.lblDate.Size = new System.Drawing.Size(48, 20);
             this.lblDate.TabIndex = 5;
@@ -76,63 +74,19 @@
             this.lblTime.AutoSize = true;
             this.lblTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTime.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblTime.Location = new System.Drawing.Point(296, 118);
+            this.lblTime.Location = new System.Drawing.Point(289, 435);
             this.lblTime.Name = "lblTime";
             this.lblTime.Size = new System.Drawing.Size(47, 20);
             this.lblTime.TabIndex = 6;
             this.lblTime.Text = "Time:";
             this.lblTime.Click += new System.EventHandler(this.label7_Click);
             // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.SystemColors.Control;
-            this.label8.Location = new System.Drawing.Point(22, 177);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(87, 20);
-            this.label8.TabIndex = 7;
-            this.label8.Text = "Invoice No:";
-            // 
-            // lblInvoice
-            // 
-            this.lblInvoice.AutoSize = true;
-            this.lblInvoice.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInvoice.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblInvoice.Location = new System.Drawing.Point(117, 202);
-            this.lblInvoice.Name = "lblInvoice";
-            this.lblInvoice.Size = new System.Drawing.Size(119, 31);
-            this.lblInvoice.TabIndex = 8;
-            this.lblInvoice.Text = "1000001";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.SystemColors.Control;
-            this.label10.Location = new System.Drawing.Point(530, 122);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(76, 20);
-            this.label10.TabIndex = 9;
-            this.label10.Text = "Discount:";
-            // 
-            // lblDiscount
-            // 
-            this.lblDiscount.AutoSize = true;
-            this.lblDiscount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDiscount.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblDiscount.Location = new System.Drawing.Point(612, 122);
-            this.lblDiscount.Name = "lblDiscount";
-            this.lblDiscount.Size = new System.Drawing.Size(36, 20);
-            this.lblDiscount.TabIndex = 10;
-            this.lblDiscount.Text = "0 %";
-            // 
             // label12
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.SystemColors.Control;
-            this.label12.Location = new System.Drawing.Point(530, 162);
+            this.label12.Location = new System.Drawing.Point(462, 396);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(108, 20);
             this.label12.TabIndex = 11;
@@ -142,8 +96,8 @@
             // 
             this.lblTotal.AutoSize = true;
             this.lblTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotal.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblTotal.Location = new System.Drawing.Point(663, 193);
+            this.lblTotal.ForeColor = System.Drawing.Color.Lime;
+            this.lblTotal.Location = new System.Drawing.Point(613, 386);
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Size = new System.Drawing.Size(67, 31);
             this.lblTotal.TabIndex = 12;
@@ -155,7 +109,7 @@
             this.btnNewTransaction.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnNewTransaction.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnNewTransaction.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNewTransaction.Location = new System.Drawing.Point(618, 290);
+            this.btnNewTransaction.Location = new System.Drawing.Point(619, 121);
             this.btnNewTransaction.Name = "btnNewTransaction";
             this.btnNewTransaction.Size = new System.Drawing.Size(146, 23);
             this.btnNewTransaction.TabIndex = 13;
@@ -168,7 +122,7 @@
             this.btnAddItem.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAddItem.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAddItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddItem.Location = new System.Drawing.Point(618, 319);
+            this.btnAddItem.Location = new System.Drawing.Point(619, 150);
             this.btnAddItem.Name = "btnAddItem";
             this.btnAddItem.Size = new System.Drawing.Size(146, 23);
             this.btnAddItem.TabIndex = 14;
@@ -182,7 +136,7 @@
             this.btnRemove.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRemove.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnRemove.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRemove.Location = new System.Drawing.Point(618, 348);
+            this.btnRemove.Location = new System.Drawing.Point(619, 179);
             this.btnRemove.Name = "btnRemove";
             this.btnRemove.Size = new System.Drawing.Size(146, 23);
             this.btnRemove.TabIndex = 15;
@@ -195,7 +149,7 @@
             this.btnPayment.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPayment.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnPayment.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPayment.Location = new System.Drawing.Point(618, 377);
+            this.btnPayment.Location = new System.Drawing.Point(619, 208);
             this.btnPayment.Name = "btnPayment";
             this.btnPayment.Size = new System.Drawing.Size(146, 23);
             this.btnPayment.TabIndex = 17;
@@ -209,7 +163,7 @@
             this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClose.Location = new System.Drawing.Point(618, 467);
+            this.btnClose.Location = new System.Drawing.Point(619, 346);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(146, 23);
             this.btnClose.TabIndex = 18;
@@ -229,7 +183,7 @@
             this.Column5,
             this.Column6,
             this.Column7});
-            this.dataGridViewTransaction.Location = new System.Drawing.Point(-1, 246);
+            this.dataGridViewTransaction.Location = new System.Drawing.Point(0, 99);
             this.dataGridViewTransaction.Name = "dataGridViewTransaction";
             this.dataGridViewTransaction.RowHeadersVisible = false;
             this.dataGridViewTransaction.Size = new System.Drawing.Size(614, 271);
@@ -277,7 +231,7 @@
             this.label1.BackColor = System.Drawing.SystemColors.GrayText;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.Control;
-            this.label1.Location = new System.Drawing.Point(349, 121);
+            this.label1.Location = new System.Drawing.Point(342, 437);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(43, 16);
             this.label1.TabIndex = 22;
@@ -289,7 +243,7 @@
             this.label2.BackColor = System.Drawing.SystemColors.GrayText;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.Control;
-            this.label2.Location = new System.Drawing.Point(76, 121);
+            this.label2.Location = new System.Drawing.Point(69, 437);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(41, 16);
             this.label2.TabIndex = 21;
@@ -301,14 +255,23 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.GrayText;
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::POSsystem.Properties.Resources.Logitech_logo_svg;
-            this.pictureBox1.Location = new System.Drawing.Point(26, 18);
+            this.pictureBox1.Location = new System.Drawing.Point(3, 11);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(719, 78);
+            this.pictureBox1.Size = new System.Drawing.Size(777, 78);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 20;
             this.pictureBox1.TabStop = false;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.DodgerBlue;
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Location = new System.Drawing.Point(-1, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(775, 100);
+            this.panel1.TabIndex = 23;
             // 
             // frmTransaction
             // 
@@ -316,10 +279,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.SystemColors.GrayText;
-            this.ClientSize = new System.Drawing.Size(770, 518);
+            this.ClientSize = new System.Drawing.Size(770, 461);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.dataGridViewTransaction);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnPayment);
@@ -328,10 +291,6 @@
             this.Controls.Add(this.btnNewTransaction);
             this.Controls.Add(this.lblTotal);
             this.Controls.Add(this.label12);
-            this.Controls.Add(this.lblDiscount);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.lblInvoice);
-            this.Controls.Add(this.label8);
             this.Controls.Add(this.lblTime);
             this.Controls.Add(this.lblDate);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -343,6 +302,7 @@
             this.Load += new System.EventHandler(this.frmTransaction_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTransaction)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -351,10 +311,6 @@
         #endregion
         private System.Windows.Forms.Label lblDate;
         private System.Windows.Forms.Label lblTime;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label lblInvoice;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label lblDiscount;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label lblTotal;
         private System.Windows.Forms.Button btnNewTransaction;
@@ -374,5 +330,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Panel panel1;
     }
 }

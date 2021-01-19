@@ -33,6 +33,14 @@ namespace POSsystem
                 Form2 f2 = new Form2();
                 f2.Show();
             }
+            else if (username != "admin" && password == "admin")
+            {
+                MessageBox.Show("Invalid username, please try again.");
+            }
+            else if (username == "admin" && password != "admin")
+            {
+                MessageBox.Show("Invalid password, please try again.");
+            }
             else
             {
                 MessageBox.Show("Invalid input, please try again.");

@@ -50,10 +50,8 @@
             this.label19 = new System.Windows.Forms.Label();
             this.lblTotal = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.lblCash = new System.Windows.Forms.Label();
-            this.lblDiscount = new System.Windows.Forms.Label();
             this.lblChange = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -61,7 +59,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(-8, 411);
+            this.label1.Location = new System.Drawing.Point(-8, 382);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(292, 37);
             this.label1.TabIndex = 0;
@@ -258,19 +256,10 @@
             this.label21.TabIndex = 16;
             this.label21.Text = "Cash";
             // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(17, 372);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(49, 13);
-            this.label22.TabIndex = 16;
-            this.label22.Text = "Discount";
-            // 
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(17, 398);
+            this.label23.Location = new System.Drawing.Point(17, 369);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(44, 13);
             this.label23.TabIndex = 16;
@@ -285,19 +274,10 @@
             this.lblCash.TabIndex = 11;
             this.lblCash.Text = "0.00";
             // 
-            // lblDiscount
-            // 
-            this.lblDiscount.AutoSize = true;
-            this.lblDiscount.Location = new System.Drawing.Point(210, 372);
-            this.lblDiscount.Name = "lblDiscount";
-            this.lblDiscount.Size = new System.Drawing.Size(28, 13);
-            this.lblDiscount.TabIndex = 11;
-            this.lblDiscount.Text = "0.00";
-            // 
             // lblChange
             // 
             this.lblChange.AutoSize = true;
-            this.lblChange.Location = new System.Drawing.Point(210, 398);
+            this.lblChange.Location = new System.Drawing.Point(210, 369);
             this.lblChange.Name = "lblChange";
             this.lblChange.Size = new System.Drawing.Size(28, 13);
             this.lblChange.TabIndex = 11;
@@ -310,14 +290,12 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(274, 527);
             this.Controls.Add(this.label23);
-            this.Controls.Add(this.label22);
             this.Controls.Add(this.label21);
             this.Controls.Add(this.lblItem4);
             this.Controls.Add(this.lblItem3);
             this.Controls.Add(this.lblItem2);
             this.Controls.Add(this.lblItem1);
             this.Controls.Add(this.lblChange);
-            this.Controls.Add(this.lblDiscount);
             this.Controls.Add(this.lblCash);
             this.Controls.Add(this.lblPrice4);
             this.Controls.Add(this.lblPrice3);
@@ -340,6 +318,7 @@
             this.MinimizeBox = false;
             this.Name = "frmReceipt";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Load += new System.EventHandler(this.frmReceipt_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -368,10 +347,8 @@
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label lblTotal;
         private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label lblCash;
-        private System.Windows.Forms.Label lblDiscount;
         private System.Windows.Forms.Label lblChange;
     }
 }

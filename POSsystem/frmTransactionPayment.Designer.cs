@@ -29,22 +29,22 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTransactionPayment));
-            this.txtTotalAmount = new System.Windows.Forms.TextBox();
+            this.txtTotal = new System.Windows.Forms.TextBox();
             this.txtCash = new System.Windows.Forms.TextBox();
-            this.txtChange = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.btnSubmit = new System.Windows.Forms.Button();
+            this.lblChange = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // txtTotalAmount
+            // txtTotal
             // 
-            this.txtTotalAmount.Location = new System.Drawing.Point(102, 23);
-            this.txtTotalAmount.Name = "txtTotalAmount";
-            this.txtTotalAmount.Size = new System.Drawing.Size(100, 20);
-            this.txtTotalAmount.TabIndex = 0;
-            this.txtTotalAmount.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.txtTotal.Location = new System.Drawing.Point(102, 23);
+            this.txtTotal.Name = "txtTotal";
+            this.txtTotal.Size = new System.Drawing.Size(100, 20);
+            this.txtTotal.TabIndex = 0;
+            this.txtTotal.TextChanged += new System.EventHandler(this.txtTotal_TextChanged);
             // 
             // txtCash
             // 
@@ -52,13 +52,7 @@
             this.txtCash.Name = "txtCash";
             this.txtCash.Size = new System.Drawing.Size(100, 20);
             this.txtCash.TabIndex = 1;
-            // 
-            // txtChange
-            // 
-            this.txtChange.Location = new System.Drawing.Point(102, 117);
-            this.txtChange.Name = "txtChange";
-            this.txtChange.Size = new System.Drawing.Size(100, 20);
-            this.txtChange.TabIndex = 2;
+            this.txtCash.TextChanged += new System.EventHandler(this.txtCash_TextChanged_1);
             // 
             // label1
             // 
@@ -70,7 +64,6 @@
             this.label1.Size = new System.Drawing.Size(90, 16);
             this.label1.TabIndex = 3;
             this.label1.Text = "Total Amount:";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -82,7 +75,6 @@
             this.label2.Size = new System.Drawing.Size(42, 16);
             this.label2.TabIndex = 4;
             this.label2.Text = "Cash:";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
@@ -94,7 +86,6 @@
             this.label3.Size = new System.Drawing.Size(58, 16);
             this.label3.TabIndex = 5;
             this.label3.Text = "Change:";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // btnSubmit
             // 
@@ -109,6 +100,17 @@
             this.btnSubmit.UseVisualStyleBackColor = false;
             this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
+            // lblChange
+            // 
+            this.lblChange.AutoSize = true;
+            this.lblChange.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblChange.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblChange.Location = new System.Drawing.Point(99, 117);
+            this.lblChange.Name = "lblChange";
+            this.lblChange.Size = new System.Drawing.Size(36, 16);
+            this.lblChange.TabIndex = 8;
+            this.lblChange.Text = "0.00";
+            // 
             // frmTransactionPayment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -116,13 +118,13 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.SystemColors.GrayText;
             this.ClientSize = new System.Drawing.Size(220, 192);
+            this.Controls.Add(this.lblChange);
             this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.txtChange);
             this.Controls.Add(this.txtCash);
-            this.Controls.Add(this.txtTotalAmount);
+            this.Controls.Add(this.txtTotal);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "frmTransactionPayment";
@@ -134,12 +136,12 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox txtTotalAmount;
+        private System.Windows.Forms.TextBox txtTotal;
         private System.Windows.Forms.TextBox txtCash;
-        private System.Windows.Forms.TextBox txtChange;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnSubmit;
+        private System.Windows.Forms.Label lblChange;
     }
 }

@@ -30,9 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPosition));
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridViewPosition = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblPositionNo = new System.Windows.Forms.Label();
             this.lblDescription = new System.Windows.Forms.Label();
             this.txtPosition = new System.Windows.Forms.TextBox();
@@ -41,7 +38,9 @@
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPosition)).BeginInit();
+            this.lvPosition = new System.Windows.Forms.ListView();
+            this.No = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Position = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // label1
@@ -54,29 +53,6 @@
             this.label1.Size = new System.Drawing.Size(119, 31);
             this.label1.TabIndex = 0;
             this.label1.Text = "Position";
-            // 
-            // dataGridViewPosition
-            // 
-            this.dataGridViewPosition.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            this.dataGridViewPosition.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewPosition.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2});
-            this.dataGridViewPosition.Location = new System.Drawing.Point(12, 72);
-            this.dataGridViewPosition.Name = "dataGridViewPosition";
-            this.dataGridViewPosition.RowHeadersVisible = false;
-            this.dataGridViewPosition.Size = new System.Drawing.Size(204, 124);
-            this.dataGridViewPosition.TabIndex = 1;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "No";
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Position";
-            this.Column2.Name = "Column2";
             // 
             // lblPositionNo
             // 
@@ -126,6 +102,7 @@
             this.btnAdd.TabIndex = 6;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnUpdate
             // 
@@ -139,6 +116,7 @@
             this.btnUpdate.TabIndex = 7;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnDelete
             // 
@@ -152,6 +130,7 @@
             this.btnDelete.TabIndex = 8;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnClose
             // 
@@ -167,6 +146,30 @@
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
+            // lvPosition
+            // 
+            this.lvPosition.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.No,
+            this.Position});
+            this.lvPosition.FullRowSelect = true;
+            this.lvPosition.GridLines = true;
+            this.lvPosition.HideSelection = false;
+            this.lvPosition.Location = new System.Drawing.Point(12, 72);
+            this.lvPosition.Name = "lvPosition";
+            this.lvPosition.Size = new System.Drawing.Size(231, 139);
+            this.lvPosition.TabIndex = 10;
+            this.lvPosition.UseCompatibleStateImageBehavior = false;
+            this.lvPosition.View = System.Windows.Forms.View.Details;
+            // 
+            // No
+            // 
+            this.No.Text = "No";
+            // 
+            // Position
+            // 
+            this.Position.Text = "Position";
+            this.Position.Width = 120;
+            // 
             // frmPosition
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -174,6 +177,7 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.SystemColors.GrayText;
             this.ClientSize = new System.Drawing.Size(552, 223);
+            this.Controls.Add(this.lvPosition);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnUpdate);
@@ -182,14 +186,13 @@
             this.Controls.Add(this.txtPosition);
             this.Controls.Add(this.lblDescription);
             this.Controls.Add(this.lblPositionNo);
-            this.Controls.Add(this.dataGridViewPosition);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "frmPosition";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Position";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPosition)).EndInit();
+            this.Load += new System.EventHandler(this.frmPosition_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -198,9 +201,6 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridViewPosition;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.Label lblPositionNo;
         private System.Windows.Forms.Label lblDescription;
         private System.Windows.Forms.TextBox txtPosition;
@@ -209,5 +209,8 @@
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.ListView lvPosition;
+        private System.Windows.Forms.ColumnHeader No;
+        private System.Windows.Forms.ColumnHeader Position;
     }
 }

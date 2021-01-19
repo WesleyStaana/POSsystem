@@ -38,8 +38,6 @@
             this.lblLastName = new System.Windows.Forms.Label();
             this.lblFirstName = new System.Windows.Forms.Label();
             this.lblMI = new System.Windows.Forms.Label();
-            this.lblAddress = new System.Windows.Forms.Label();
-            this.lblContactNo = new System.Windows.Forms.Label();
             this.lblPosition = new System.Windows.Forms.Label();
             this.txtStaffID = new System.Windows.Forms.TextBox();
             this.txtUserName = new System.Windows.Forms.TextBox();
@@ -47,8 +45,6 @@
             this.txtLastName = new System.Windows.Forms.TextBox();
             this.txtFirstName = new System.Windows.Forms.TextBox();
             this.txtMI = new System.Windows.Forms.TextBox();
-            this.txtAddress = new System.Windows.Forms.TextBox();
-            this.txtContactNo = new System.Windows.Forms.TextBox();
             this.cmbPosition = new System.Windows.Forms.ComboBox();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
@@ -82,9 +78,9 @@
             this.lblStaffID.ForeColor = System.Drawing.SystemColors.Control;
             this.lblStaffID.Location = new System.Drawing.Point(17, 122);
             this.lblStaffID.Name = "lblStaffID";
-            this.lblStaffID.Size = new System.Drawing.Size(53, 16);
+            this.lblStaffID.Size = new System.Drawing.Size(45, 16);
             this.lblStaffID.TabIndex = 2;
-            this.lblStaffID.Text = "Staff ID:";
+            this.lblStaffID.Text = "ID No:";
             // 
             // lblUserName
             // 
@@ -149,34 +145,12 @@
             this.lblMI.TabIndex = 5;
             this.lblMI.Text = "M.I";
             // 
-            // lblAddress
-            // 
-            this.lblAddress.AutoSize = true;
-            this.lblAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAddress.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblAddress.Location = new System.Drawing.Point(17, 285);
-            this.lblAddress.Name = "lblAddress";
-            this.lblAddress.Size = new System.Drawing.Size(62, 16);
-            this.lblAddress.TabIndex = 6;
-            this.lblAddress.Text = "Address:";
-            // 
-            // lblContactNo
-            // 
-            this.lblContactNo.AutoSize = true;
-            this.lblContactNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblContactNo.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblContactNo.Location = new System.Drawing.Point(15, 329);
-            this.lblContactNo.Name = "lblContactNo";
-            this.lblContactNo.Size = new System.Drawing.Size(77, 16);
-            this.lblContactNo.TabIndex = 7;
-            this.lblContactNo.Text = "Contact No:";
-            // 
             // lblPosition
             // 
             this.lblPosition.AutoSize = true;
             this.lblPosition.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPosition.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblPosition.Location = new System.Drawing.Point(17, 364);
+            this.lblPosition.Location = new System.Drawing.Point(17, 288);
             this.lblPosition.Name = "lblPosition";
             this.lblPosition.Size = new System.Drawing.Size(59, 16);
             this.lblPosition.TabIndex = 8;
@@ -188,6 +162,7 @@
             this.txtStaffID.Name = "txtStaffID";
             this.txtStaffID.Size = new System.Drawing.Size(100, 20);
             this.txtStaffID.TabIndex = 9;
+            this.txtStaffID.TextChanged += new System.EventHandler(this.txtStaffID_TextChanged);
             // 
             // txtUserName
             // 
@@ -224,24 +199,10 @@
             this.txtMI.Size = new System.Drawing.Size(69, 20);
             this.txtMI.TabIndex = 14;
             // 
-            // txtAddress
-            // 
-            this.txtAddress.Location = new System.Drawing.Point(94, 285);
-            this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(307, 20);
-            this.txtAddress.TabIndex = 15;
-            // 
-            // txtContactNo
-            // 
-            this.txtContactNo.Location = new System.Drawing.Point(94, 325);
-            this.txtContactNo.Name = "txtContactNo";
-            this.txtContactNo.Size = new System.Drawing.Size(135, 20);
-            this.txtContactNo.TabIndex = 16;
-            // 
             // cmbPosition
             // 
             this.cmbPosition.FormattingEnabled = true;
-            this.cmbPosition.Location = new System.Drawing.Point(94, 359);
+            this.cmbPosition.Location = new System.Drawing.Point(90, 288);
             this.cmbPosition.Name = "cmbPosition";
             this.cmbPosition.Size = new System.Drawing.Size(121, 21);
             this.cmbPosition.TabIndex = 17;
@@ -257,6 +218,7 @@
             this.btnSave.TabIndex = 18;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnCancel
             // 
@@ -281,8 +243,6 @@
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.cmbPosition);
-            this.Controls.Add(this.txtContactNo);
-            this.Controls.Add(this.txtAddress);
             this.Controls.Add(this.txtMI);
             this.Controls.Add(this.txtFirstName);
             this.Controls.Add(this.txtLastName);
@@ -290,8 +250,6 @@
             this.Controls.Add(this.txtUserName);
             this.Controls.Add(this.txtStaffID);
             this.Controls.Add(this.lblPosition);
-            this.Controls.Add(this.lblContactNo);
-            this.Controls.Add(this.lblAddress);
             this.Controls.Add(this.lblMI);
             this.Controls.Add(this.lblFirstName);
             this.Controls.Add(this.lblLastName);
@@ -306,6 +264,7 @@
             this.Name = "frmStaff";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UserStaff";
+            this.Load += new System.EventHandler(this.frmStaff_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -322,8 +281,6 @@
         private System.Windows.Forms.Label lblLastName;
         private System.Windows.Forms.Label lblFirstName;
         private System.Windows.Forms.Label lblMI;
-        private System.Windows.Forms.Label lblAddress;
-        private System.Windows.Forms.Label lblContactNo;
         private System.Windows.Forms.Label lblPosition;
         private System.Windows.Forms.TextBox txtStaffID;
         private System.Windows.Forms.TextBox txtUserName;
@@ -331,8 +288,6 @@
         private System.Windows.Forms.TextBox txtLastName;
         private System.Windows.Forms.TextBox txtFirstName;
         private System.Windows.Forms.TextBox txtMI;
-        private System.Windows.Forms.TextBox txtAddress;
-        private System.Windows.Forms.TextBox txtContactNo;
         private System.Windows.Forms.ComboBox cmbPosition;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnCancel;

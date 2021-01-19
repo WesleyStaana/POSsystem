@@ -33,6 +33,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MySql.Data, Version=8.0.22.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Desktop\MySql.Data.DLL</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -46,10 +50,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmHeadset.cs">
+    <Compile Include="Design\frmHeadset.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmHeadset.Designer.cs">
+    <Compile Include="Design\frmHeadset.Designer.cs">
       <DependentUpon>frmHeadset.cs</DependentUpon>
     </Compile>
     <Compile Include="frmItemAddItem.cs">
@@ -64,10 +68,10 @@
     <Compile Include="frmItems.Designer.cs">
       <DependentUpon>frmItems.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmKeyboard.cs">
+    <Compile Include="Design\frmKeyboard.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmKeyboard.Designer.cs">
+    <Compile Include="Design\frmKeyboard.Designer.cs">
       <DependentUpon>frmKeyboard.cs</DependentUpon>
     </Compile>
     <Compile Include="frmLogin.cs">
@@ -82,10 +86,10 @@
     <Compile Include="frmDashboard.Designer.cs">
       <DependentUpon>frmDashboard.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmMouse.cs">
+    <Compile Include="Design\frmMouse.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmMouse.Designer.cs">
+    <Compile Include="Design\frmMouse.Designer.cs">
       <DependentUpon>frmMouse.cs</DependentUpon>
     </Compile>
     <Compile Include="frmPosition.cs">
@@ -132,7 +136,13 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="frmHeadset.resx">
+    <Compile Include="frmStockIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStockIn.Designer.cs">
+      <DependentUpon>frmStockIn.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Design\frmHeadset.resx">
       <DependentUpon>frmHeadset.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmItemAddItem.resx">
@@ -141,7 +151,7 @@
     <EmbeddedResource Include="frmItems.resx">
       <DependentUpon>frmItems.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmKeyboard.resx">
+    <EmbeddedResource Include="Design\frmKeyboard.resx">
       <DependentUpon>frmKeyboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
@@ -150,7 +160,7 @@
     <EmbeddedResource Include="frmDashboard.resx">
       <DependentUpon>frmDashboard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmMouse.resx">
+    <EmbeddedResource Include="Design\frmMouse.resx">
       <DependentUpon>frmMouse.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPosition.resx">
@@ -184,6 +194,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="frmStockIn.resx">
+      <DependentUpon>frmStockIn.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

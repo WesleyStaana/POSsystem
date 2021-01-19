@@ -1,6 +1,5 @@
 C:\Users\artou\source\repos\POSsystem\POSsystem\obj\Debug\POSsystem.csprojAssemblyReference.cache
 C:\Users\artou\source\repos\POSsystem\POSsystem\obj\Debug\POSsystem.frmItemAddItem.resources
-C:\Users\artou\source\repos\POSsystem\POSsystem\obj\Debug\POSsystem.frmCategory.resources
 C:\Users\artou\source\repos\POSsystem\POSsystem\obj\Debug\POSsystem.frmItems.resources
 C:\Users\artou\source\repos\POSsystem\POSsystem\obj\Debug\POSsystem.Form2.resources
 C:\Users\artou\source\repos\POSsystem\POSsystem\obj\Debug\POSsystem.frmPosition.resources
@@ -42,3 +41,11 @@ C:\Users\Maureen Quizon\Desktop\POSsystem\POSsystem\obj\Debug\POSsystem.frmLogin
 C:\Users\Maureen Quizon\Desktop\POSsystem\POSsystem\obj\Debug\POSsystem.frmHeadset.resources
 C:\Users\Maureen Quizon\Desktop\POSsystem\POSsystem\obj\Debug\POSsystem.frmKeyboard.resources
 C:\Users\Maureen Quizon\Desktop\POSsystem\POSsystem\obj\Debug\POSsystem.frmMouse.resources
+C:\Users\artou\source\repos\POSsystem\POSsystem\bin\Debug\MySql.Data.DLL
+C:\Users\artou\source\repos\POSsystem\POSsystem\bin\Debug\Renci.SshNet.dll
+C:\Users\artou\source\repos\POSsystem\POSsystem\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\artou\source\repos\POSsystem\POSsystem\obj\Debug\POSsystem.frmHeadset.resources
+C:\Users\artou\source\repos\POSsystem\POSsystem\obj\Debug\POSsystem.frmKeyboard.resources
+C:\Users\artou\source\repos\POSsystem\POSsystem\obj\Debug\POSsystem.frmMouse.resources
+C:\Users\artou\source\repos\POSsystem\POSsystem\obj\Debug\POSsystem.csproj.CopyComplete
+C:\Users\artou\source\repos\POSsystem\POSsystem\obj\Debug\POSsystem.frmStockIn.resources

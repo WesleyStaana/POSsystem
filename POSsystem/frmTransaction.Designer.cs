@@ -34,8 +34,6 @@
             this.lblTime = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.lblInvoice = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.lblDiscount = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.lblTotal = new System.Windows.Forms.Label();
             this.btnNewTransaction = new System.Windows.Forms.Button();
@@ -106,28 +104,6 @@
             this.lblInvoice.Size = new System.Drawing.Size(119, 31);
             this.lblInvoice.TabIndex = 8;
             this.lblInvoice.Text = "1000001";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.SystemColors.Control;
-            this.label10.Location = new System.Drawing.Point(530, 122);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(76, 20);
-            this.label10.TabIndex = 9;
-            this.label10.Text = "Discount:";
-            // 
-            // lblDiscount
-            // 
-            this.lblDiscount.AutoSize = true;
-            this.lblDiscount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDiscount.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblDiscount.Location = new System.Drawing.Point(612, 122);
-            this.lblDiscount.Name = "lblDiscount";
-            this.lblDiscount.Size = new System.Drawing.Size(36, 20);
-            this.lblDiscount.TabIndex = 10;
-            this.lblDiscount.Text = "0 %";
             // 
             // label12
             // 
@@ -305,9 +281,9 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::POSsystem.Properties.Resources.Logitech_logo_svg;
-            this.pictureBox1.Location = new System.Drawing.Point(28, 11);
+            this.pictureBox1.Location = new System.Drawing.Point(0, 11);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(719, 78);
+            this.pictureBox1.Size = new System.Drawing.Size(772, 78);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 20;
             this.pictureBox1.TabStop = false;
@@ -339,8 +315,6 @@
             this.Controls.Add(this.btnNewTransaction);
             this.Controls.Add(this.lblTotal);
             this.Controls.Add(this.label12);
-            this.Controls.Add(this.lblDiscount);
-            this.Controls.Add(this.label10);
             this.Controls.Add(this.lblInvoice);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.lblTime);
@@ -365,8 +339,6 @@
         private System.Windows.Forms.Label lblTime;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label lblInvoice;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label lblDiscount;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label lblTotal;
         private System.Windows.Forms.Button btnNewTransaction;

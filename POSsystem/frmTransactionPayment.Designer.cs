@@ -44,6 +44,7 @@
             this.txtTotal.Name = "txtTotal";
             this.txtTotal.Size = new System.Drawing.Size(100, 20);
             this.txtTotal.TabIndex = 0;
+            this.txtTotal.Text = "0.00";
             this.txtTotal.TextChanged += new System.EventHandler(this.txtTotal_TextChanged);
             // 
             // txtCash
@@ -52,7 +53,8 @@
             this.txtCash.Name = "txtCash";
             this.txtCash.Size = new System.Drawing.Size(100, 20);
             this.txtCash.TabIndex = 1;
-            this.txtCash.TextChanged += new System.EventHandler(this.txtCash_TextChanged_1);
+            this.txtCash.Text = "0.00";
+            this.txtCash.TextChanged += new System.EventHandler(this.txtCash_TextChanged);
             // 
             // label1
             // 

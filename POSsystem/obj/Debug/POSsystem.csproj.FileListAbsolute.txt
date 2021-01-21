@@ -89,3 +89,20 @@ C:\Users\Maureen Quizon\Downloads\POSsystem\POSsystem\obj\Debug\POSsystem.csproj
 C:\Users\Maureen Quizon\Downloads\POSsystem\POSsystem\obj\Debug\POSsystem.exe
 C:\Users\Maureen Quizon\Downloads\POSsystem\POSsystem\obj\Debug\POSsystem.pdb
 C:\Users\artou\source\repos\POSsystem\POSsystem\obj\Debug\POSsystem.frmUpdateItem.resources
+C:\Users\Maureen Quizon\Desktop\POSsystem\POSsystem\bin\Debug\MySql.Data.dll
+C:\Users\Maureen Quizon\Desktop\POSsystem\POSsystem\bin\Debug\Google.Protobuf.dll
+C:\Users\Maureen Quizon\Desktop\POSsystem\POSsystem\bin\Debug\Zstandard.Net.dll
+C:\Users\Maureen Quizon\Desktop\POSsystem\POSsystem\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\Maureen Quizon\Desktop\POSsystem\POSsystem\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\Maureen Quizon\Desktop\POSsystem\POSsystem\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\Maureen Quizon\Desktop\POSsystem\POSsystem\bin\Debug\Renci.SshNet.dll
+C:\Users\Maureen Quizon\Desktop\POSsystem\POSsystem\bin\Debug\System.Memory.dll
+C:\Users\Maureen Quizon\Desktop\POSsystem\POSsystem\bin\Debug\System.Buffers.dll
+C:\Users\Maureen Quizon\Desktop\POSsystem\POSsystem\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\Maureen Quizon\Desktop\POSsystem\POSsystem\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\Maureen Quizon\Desktop\POSsystem\POSsystem\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Maureen Quizon\Desktop\POSsystem\POSsystem\bin\Debug\MySql.Data.xml
+C:\Users\Maureen Quizon\Desktop\POSsystem\POSsystem\obj\Debug\POSsystem.exe.config
+C:\Users\Maureen Quizon\Desktop\POSsystem\POSsystem\obj\Debug\POSsystem.frmUpdateItem.resources
+C:\Users\Maureen Quizon\Desktop\POSsystem\POSsystem\obj\Debug\POSsystem.frmStockIn.resources
+C:\Users\Maureen Quizon\Desktop\POSsystem\POSsystem\obj\Debug\POSsystem.csproj.CopyComplete

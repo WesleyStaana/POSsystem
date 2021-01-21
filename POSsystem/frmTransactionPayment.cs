@@ -12,9 +12,7 @@ namespace POSsystem
 {
     public partial class frmTransactionPayment : Form
     {
-        public static float cash;
-        public static float total;
-        public static float change;
+        public static float cash, total, change;
 
         public frmTransactionPayment()
         {
@@ -42,45 +40,45 @@ namespace POSsystem
 
         private void txtTotal_TextChanged(object sender, EventArgs e)
         {
-            if (txtCash.Text.Length > 0 && txtTotal.Text.Length > 0)
-            {
-                lblChange.Text = Convert.ToString(Convert.ToDouble(txtCash.Text) - Convert.ToDouble(txtTotal.Text));
-            }
+            checker(txtTotal, "0.00");
+            Calculate();
+        }
 
-            if (txtCash.Text.Length > 0 && txtTotal.Text.Length == 0)
-            {
-                lblChange.Text = "0.00";
-            }
+        private void txtCash_TextChanged(object sender, EventArgs e)
+        {
+            checker(txtCash, "0.00");
+            Calculate();
+        }
 
-            if (txtCash.Text.Length == 0 && txtTotal.Text.Length > 0)
+        private void checker(TextBox txtbox, string defaultValue)
+        {
+            if (txtbox.Text.Trim().Length == 0)
             {
-                lblChange.Text = "0.00";
-            }
-
-            if (txtCash.Text.Length == 0 && txtTotal.Text.Length == 0)
-            {
-                lblChange.Text = "0.00";
+                txtbox.Text = defaultValue;
             }
         }
 
-        private void txtCash_TextChanged_1(object sender, EventArgs e)
+        private void Calculate()
         {
-            if (txtCash.Text.Length > 0 && txtTotal.Text.Length > 0)
+            double total = Convert.ToDouble(txtTotal.Text);
+            double cash = Convert.ToDouble(txtCash.Text);
+
+            if (cash > 0 && total > 0)
             {
-                lblChange.Text = Convert.ToString(Convert.ToDouble(txtCash.Text) - Convert.ToDouble(txtTotal.Text));
+                lblChange.Text = Convert.ToString(cash - total);
             }
 
-            if (txtCash.Text.Length > 0 && txtTotal.Text.Length == 0)
-            {
-                lblChange.Text = "0.00";
-            }
-
-            if (txtCash.Text.Length == 0 && txtTotal.Text.Length > 0)
+            else if (cash > 0 && total == 0)
             {
                 lblChange.Text = "0.00";
             }
 
-            if (txtCash.Text.Length == 0 && txtTotal.Text.Length == 0)
+            else if (cash == 0 && total > 0)
+            {
+                lblChange.Text = "0.00";
+            }
+
+            else if (cash == 0 && total == 0)
             {
                 lblChange.Text = "0.00";
             }

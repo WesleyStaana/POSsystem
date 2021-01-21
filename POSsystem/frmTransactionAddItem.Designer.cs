@@ -42,8 +42,8 @@
             this.txtUnitPrice = new System.Windows.Forms.TextBox();
             this.txtQuantity = new System.Windows.Forms.TextBox();
             this.txtDiscount = new System.Windows.Forms.TextBox();
-            this.txtTotalPrice = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lblTotalPrice = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -156,6 +156,8 @@
             this.txtUnitPrice.Name = "txtUnitPrice";
             this.txtUnitPrice.Size = new System.Drawing.Size(100, 20);
             this.txtUnitPrice.TabIndex = 10;
+            this.txtUnitPrice.Text = "0.00";
+            this.txtUnitPrice.TextChanged += new System.EventHandler(this.txtUnitPrice_TextChanged);
             // 
             // txtQuantity
             // 
@@ -163,6 +165,8 @@
             this.txtQuantity.Name = "txtQuantity";
             this.txtQuantity.Size = new System.Drawing.Size(100, 20);
             this.txtQuantity.TabIndex = 11;
+            this.txtQuantity.Text = "0";
+            this.txtQuantity.TextChanged += new System.EventHandler(this.txtQuantity_TextChanged);
             // 
             // txtDiscount
             // 
@@ -170,13 +174,8 @@
             this.txtDiscount.Name = "txtDiscount";
             this.txtDiscount.Size = new System.Drawing.Size(100, 20);
             this.txtDiscount.TabIndex = 12;
-            // 
-            // txtTotalPrice
-            // 
-            this.txtTotalPrice.Location = new System.Drawing.Point(75, 232);
-            this.txtTotalPrice.Name = "txtTotalPrice";
-            this.txtTotalPrice.Size = new System.Drawing.Size(100, 20);
-            this.txtTotalPrice.TabIndex = 13;
+            this.txtDiscount.Text = "0";
+            this.txtDiscount.TextChanged += new System.EventHandler(this.txtDiscount_TextChanged);
             // 
             // pictureBox1
             // 
@@ -189,6 +188,17 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
+            // lblTotalPrice
+            // 
+            this.lblTotalPrice.AutoSize = true;
+            this.lblTotalPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalPrice.ForeColor = System.Drawing.Color.Lime;
+            this.lblTotalPrice.Location = new System.Drawing.Point(72, 235);
+            this.lblTotalPrice.Name = "lblTotalPrice";
+            this.lblTotalPrice.Size = new System.Drawing.Size(16, 16);
+            this.lblTotalPrice.TabIndex = 15;
+            this.lblTotalPrice.Text = "0";
+            // 
             // frmTransactionAddItem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -196,8 +206,8 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.SystemColors.GrayText;
             this.ClientSize = new System.Drawing.Size(291, 272);
+            this.Controls.Add(this.lblTotalPrice);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.txtTotalPrice);
             this.Controls.Add(this.txtDiscount);
             this.Controls.Add(this.txtQuantity);
             this.Controls.Add(this.txtUnitPrice);
@@ -236,7 +246,7 @@
         private System.Windows.Forms.TextBox txtUnitPrice;
         private System.Windows.Forms.TextBox txtQuantity;
         private System.Windows.Forms.TextBox txtDiscount;
-        private System.Windows.Forms.TextBox txtTotalPrice;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label lblTotalPrice;
     }
 }

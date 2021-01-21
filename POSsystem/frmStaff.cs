@@ -88,5 +88,18 @@ namespace POSsystem
         {
 
         }
+
+        public frmStaff(ListView.SelectedListViewItemCollection info)
+        {
+            InitializeComponent();
+            txtStaffId.Text = info[0].Text;
+            txtLastName.Text = info[0].SubItems[1].Text;
+            txtFirstName.Text = info[0].SubItems[2].Text;
+            txtMI.Text = info[0].SubItems[3].Text;
+            cmbPosition.Text = info[0].SubItems[4].Text;
+            txtUserName.Text = info[0].SubItems[5].Text;
+            txtPassword.Text = info[0].SubItems[6].Text;
+        }
+
     }
 }

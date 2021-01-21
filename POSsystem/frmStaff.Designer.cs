@@ -39,7 +39,7 @@
             this.lblFirstName = new System.Windows.Forms.Label();
             this.lblMI = new System.Windows.Forms.Label();
             this.lblPosition = new System.Windows.Forms.Label();
-            this.txtStaffID = new System.Windows.Forms.TextBox();
+            this.txtStaffId = new System.Windows.Forms.TextBox();
             this.txtUserName = new System.Windows.Forms.TextBox();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.txtLastName = new System.Windows.Forms.TextBox();
@@ -156,13 +156,14 @@
             this.lblPosition.TabIndex = 8;
             this.lblPosition.Text = "Position:";
             // 
-            // txtStaffID
+            // txtStaffId
             // 
-            this.txtStaffID.Location = new System.Drawing.Point(94, 118);
-            this.txtStaffID.Name = "txtStaffID";
-            this.txtStaffID.Size = new System.Drawing.Size(100, 20);
-            this.txtStaffID.TabIndex = 9;
-            this.txtStaffID.TextChanged += new System.EventHandler(this.txtStaffID_TextChanged);
+            this.txtStaffId.Location = new System.Drawing.Point(94, 118);
+            this.txtStaffId.Name = "txtStaffId";
+            this.txtStaffId.ReadOnly = true;
+            this.txtStaffId.Size = new System.Drawing.Size(100, 20);
+            this.txtStaffId.TabIndex = 9;
+            this.txtStaffId.TextChanged += new System.EventHandler(this.txtStaffID_TextChanged);
             // 
             // txtUserName
             // 
@@ -175,6 +176,7 @@
             // 
             this.txtPassword.Location = new System.Drawing.Point(94, 189);
             this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(117, 20);
             this.txtPassword.TabIndex = 11;
             // 
@@ -248,7 +250,7 @@
             this.Controls.Add(this.txtLastName);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtUserName);
-            this.Controls.Add(this.txtStaffID);
+            this.Controls.Add(this.txtStaffId);
             this.Controls.Add(this.lblPosition);
             this.Controls.Add(this.lblMI);
             this.Controls.Add(this.lblFirstName);
@@ -282,7 +284,7 @@
         private System.Windows.Forms.Label lblFirstName;
         private System.Windows.Forms.Label lblMI;
         private System.Windows.Forms.Label lblPosition;
-        private System.Windows.Forms.TextBox txtStaffID;
+        private System.Windows.Forms.TextBox txtStaffId;
         private System.Windows.Forms.TextBox txtUserName;
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.TextBox txtLastName;

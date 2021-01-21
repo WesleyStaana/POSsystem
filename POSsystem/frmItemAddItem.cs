@@ -14,6 +14,8 @@ namespace POSsystem
 {
     public partial class frmItemAddItem : Form
     {
+        
+
         private String connectionString = "SERVER=localhost;DATABASE=possystem_db;UID=root;PASSWORD=staana0522;charset=utf8;";
         public frmItemAddItem()
         {
@@ -32,7 +34,7 @@ namespace POSsystem
 
         private void frmItemAddItem_Load(object sender, EventArgs e)
         {
-
+            this.loadItemList();
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -56,6 +58,7 @@ namespace POSsystem
             conn.Close();
 
             this.loadItemList();
+
         }
 
         private void loadItemList() // To connect and refresh List and database

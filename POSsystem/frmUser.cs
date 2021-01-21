@@ -59,6 +59,7 @@ namespace POSsystem
                 lvUser.Items[index].SubItems.Add(dataSet.Tables[0].Rows[index].ItemArray.GetValue(3).ToString());
                 lvUser.Items[index].SubItems.Add(dataSet.Tables[0].Rows[index].ItemArray.GetValue(4).ToString());
                 lvUser.Items[index].SubItems.Add(dataSet.Tables[0].Rows[index].ItemArray.GetValue(5).ToString());
+                lvUser.Items[index].SubItems.Add(dataSet.Tables[0].Rows[index].ItemArray.GetValue(6).ToString());
 
             }
 
@@ -66,7 +67,8 @@ namespace POSsystem
         }
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-
+            frmStaff frm = new frmStaff(lvUser.SelectedItems);
+            frm.ShowDialog();
         }
     }
 }

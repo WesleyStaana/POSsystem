@@ -128,6 +128,12 @@
     <Compile Include="frmTransactionPayment.Designer.cs">
       <DependentUpon>frmTransactionPayment.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmUpdateItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUpdateItem.Designer.cs">
+      <DependentUpon>frmUpdateItem.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmUser.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -180,6 +186,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmTransactionPayment.resx">
       <DependentUpon>frmTransactionPayment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUpdateItem.resx">
+      <DependentUpon>frmUpdateItem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmUser.resx">
       <DependentUpon>frmUser.cs</DependentUpon>

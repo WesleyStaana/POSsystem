@@ -88,3 +88,4 @@ C:\Users\Maureen Quizon\Downloads\POSsystem\POSsystem\obj\Debug\POSsystem.csproj
 C:\Users\Maureen Quizon\Downloads\POSsystem\POSsystem\obj\Debug\POSsystem.csproj.CopyComplete
 C:\Users\Maureen Quizon\Downloads\POSsystem\POSsystem\obj\Debug\POSsystem.exe
 C:\Users\Maureen Quizon\Downloads\POSsystem\POSsystem\obj\Debug\POSsystem.pdb
+C:\Users\artou\source\repos\POSsystem\POSsystem\obj\Debug\POSsystem.frmUpdateItem.resources

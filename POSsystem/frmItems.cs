@@ -37,6 +37,7 @@ namespace POSsystem
         {
             frmStockIn stockIn = new frmStockIn();
             stockIn.ShowDialog();
+            this.loadItemList();
         }
 
         public void loadItemList()
@@ -71,7 +72,30 @@ namespace POSsystem
         }
         private void lvItems_Click(Object sender, EventArgs e)
         {
+            
+            
+        }
+
+        private void lvItems_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
         }
+
+        private void lvItems_ItemActivate(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+
+           
+            frmUpdateItem frm = new frmUpdateItem(lvItems.SelectedItems);
+            frm.ShowDialog();
+            this.loadItemList();
+
+        }
+        
     }
 }
+

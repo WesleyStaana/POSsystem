@@ -7,11 +7,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data;
+using MySql.Data.MySqlClient;
 
 namespace POSsystem
 {
+    
     public partial class frmTransactionAddItem : Form
     {
+        private String connectionString = "SERVER=localhost;DATABASE=possystem_db;UID=root;PASSWORD=staana0522;charset=utf8;";
+
+        private frmTransaction listview = null;
+
+        public void setItem(frmTransaction list)
+        {
+            listview = list;
+        }
+
+
         public frmTransactionAddItem()
         {
             InitializeComponent();
@@ -20,7 +33,10 @@ namespace POSsystem
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             frmItems item = new frmItems();
-            item.Show();
+            item.setItem(this);
+            item.ShowDialog();
+
+            this.loadItemList();
         }
 
         private void checker(TextBox txtbox, string defaultValue)
@@ -89,6 +105,63 @@ namespace POSsystem
         {
             checker(txtDiscount, "0");
             Calculate();
+        }
+
+        private void loadItemList() // To connect and refresh List and database
+        {
+            MySqlConnection conn = new MySqlConnection(connectionString);
+            MySqlDataAdapter adapter = new MySqlDataAdapter();
+            MySqlCommand command = conn.CreateCommand();
+
+            command.CommandText = "SELECT * FROM items_tbl";
+
+            adapter.SelectCommand = command;
+
+            MySqlCommandBuilder commandBuilder = new MySqlCommandBuilder(adapter);
+
+            conn.Open();
+
+            DataSet dataSet = new DataSet();
+            adapter.Fill(dataSet, "items_tbl");
+
+            conn.Close();
+        }
+
+        private void frmTransactionAddItem_Load(object sender, EventArgs e)
+        {
+           
+        }
+
+        public void setTxtItemCode(string itemCode)
+        {
+            txtItemCode.Text = itemCode;
+        }
+
+        public void setTxtItemName(string itemName)
+        {
+            txtItemName.Text = itemName;
+        }
+
+        public void setTxtUnitPrice(string UnitPrice)
+        {
+            txtUnitPrice.Text = UnitPrice;
+        }
+
+        public void setTxtQuantity(string Quantity)
+        {
+            txtQuantity.Text = Quantity;
+        }
+
+        public void setTxtDiscount(string Discount)
+        {
+            txtDiscount.Text = Discount;
+        }
+
+        private void btnAddtoCart_Click(object sender, EventArgs e)
+        {
+            ListViewItem item = new ListViewItem();
+            item.Text = txtItemCode.Text;
+            this.lvTransaction.Items.AddRange
         }
     }
 }

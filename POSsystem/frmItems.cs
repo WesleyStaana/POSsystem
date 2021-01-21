@@ -14,6 +14,12 @@ namespace POSsystem
 {
     public partial class frmItems : Form
     {
+        private frmTransactionAddItem transaction = null;
+        public void setItem(frmTransactionAddItem test)
+        {
+            transaction = test;
+        }
+
         private String connectionString = "SERVER=localhost;DATABASE=possystem_db;UID=root;PASSWORD=staana0522;charset=utf8;";
         public frmItems()
         {
@@ -95,7 +101,14 @@ namespace POSsystem
             this.loadItemList();
 
         }
-        
+
+        private void lvItems_DoubleClick(object sender, EventArgs e)
+        {
+            ListViewItem item = lvItems.SelectedItems[0];
+            transaction.setTxtItemCode(item.Text);
+            transaction.setTxtItemName(item.SubItems[1].Text);
+            transaction.setTxtUnitPrice(item.SubItems[3].Text);
+        }
     }
 }
 

@@ -166,6 +166,7 @@
             this.lvItems.View = System.Windows.Forms.View.Details;
             this.lvItems.ItemActivate += new System.EventHandler(this.lvItems_ItemActivate);
             this.lvItems.SelectedIndexChanged += new System.EventHandler(this.lvItems_SelectedIndexChanged);
+            this.lvItems.DoubleClick += new System.EventHandler(this.lvItems_DoubleClick);
             // 
             // columnHeader1
             // 

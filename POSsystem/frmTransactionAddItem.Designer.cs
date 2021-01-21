@@ -38,7 +38,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.btnAddtoCart = new System.Windows.Forms.Button();
             this.txtItemCode = new System.Windows.Forms.TextBox();
-            this.txtItem = new System.Windows.Forms.TextBox();
+            this.txtItemName = new System.Windows.Forms.TextBox();
             this.txtUnitPrice = new System.Windows.Forms.TextBox();
             this.txtQuantity = new System.Windows.Forms.TextBox();
             this.txtDiscount = new System.Windows.Forms.TextBox();
@@ -135,23 +135,27 @@
             this.btnAddtoCart.TabIndex = 7;
             this.btnAddtoCart.Text = "Add to Cart";
             this.btnAddtoCart.UseVisualStyleBackColor = false;
+            this.btnAddtoCart.Click += new System.EventHandler(this.btnAddtoCart_Click);
             // 
             // txtItemCode
             // 
+            this.txtItemCode.Enabled = false;
             this.txtItemCode.Location = new System.Drawing.Point(75, 35);
             this.txtItemCode.Name = "txtItemCode";
             this.txtItemCode.Size = new System.Drawing.Size(100, 20);
             this.txtItemCode.TabIndex = 8;
             // 
-            // txtItem
+            // txtItemName
             // 
-            this.txtItem.Location = new System.Drawing.Point(75, 71);
-            this.txtItem.Name = "txtItem";
-            this.txtItem.Size = new System.Drawing.Size(184, 20);
-            this.txtItem.TabIndex = 9;
+            this.txtItemName.Enabled = false;
+            this.txtItemName.Location = new System.Drawing.Point(75, 71);
+            this.txtItemName.Name = "txtItemName";
+            this.txtItemName.Size = new System.Drawing.Size(184, 20);
+            this.txtItemName.TabIndex = 9;
             // 
             // txtUnitPrice
             // 
+            this.txtUnitPrice.Enabled = false;
             this.txtUnitPrice.Location = new System.Drawing.Point(75, 114);
             this.txtUnitPrice.Name = "txtUnitPrice";
             this.txtUnitPrice.Size = new System.Drawing.Size(100, 20);
@@ -211,7 +215,7 @@
             this.Controls.Add(this.txtDiscount);
             this.Controls.Add(this.txtQuantity);
             this.Controls.Add(this.txtUnitPrice);
-            this.Controls.Add(this.txtItem);
+            this.Controls.Add(this.txtItemName);
             this.Controls.Add(this.txtItemCode);
             this.Controls.Add(this.btnAddtoCart);
             this.Controls.Add(this.label7);
@@ -225,6 +229,7 @@
             this.MaximizeBox = false;
             this.Name = "frmTransactionAddItem";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Load += new System.EventHandler(this.frmTransactionAddItem_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -242,7 +247,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btnAddtoCart;
         private System.Windows.Forms.TextBox txtItemCode;
-        private System.Windows.Forms.TextBox txtItem;
+        private System.Windows.Forms.TextBox txtItemName;
         private System.Windows.Forms.TextBox txtUnitPrice;
         private System.Windows.Forms.TextBox txtQuantity;
         private System.Windows.Forms.TextBox txtDiscount;

@@ -131,6 +131,7 @@
             this.MaximizeBox = false;
             this.Name = "frmTransactionPayment";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Load += new System.EventHandler(this.frmTransactionPayment_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

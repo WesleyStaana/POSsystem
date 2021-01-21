@@ -39,20 +39,18 @@
             this.btnRemove = new System.Windows.Forms.Button();
             this.btnPayment = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
-            this.dataGridViewTransaction = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTransaction)).BeginInit();
+            this.lvTransaction = new System.Windows.Forms.ListView();
+            this.Item_Code = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Item_Name = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Unit_Price = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Quantity = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Discount = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Final_Price = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -171,60 +169,6 @@
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // dataGridViewTransaction
-            // 
-            this.dataGridViewTransaction.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            this.dataGridViewTransaction.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewTransaction.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4,
-            this.Column5,
-            this.Column6,
-            this.Column7});
-            this.dataGridViewTransaction.Location = new System.Drawing.Point(0, 99);
-            this.dataGridViewTransaction.Name = "dataGridViewTransaction";
-            this.dataGridViewTransaction.RowHeadersVisible = false;
-            this.dataGridViewTransaction.Size = new System.Drawing.Size(614, 271);
-            this.dataGridViewTransaction.TabIndex = 19;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Quantity";
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "ItemCode";
-            this.Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "ItemNo";
-            this.Column3.Name = "Column3";
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Item Description";
-            this.Column4.Name = "Column4";
-            this.Column4.Width = 150;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Price";
-            this.Column5.Name = "Column5";
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "Discount";
-            this.Column6.Name = "Column6";
-            // 
-            // Column7
-            // 
-            this.Column7.HeaderText = "Total";
-            this.Column7.Name = "Column7";
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -273,6 +217,55 @@
             this.panel1.Size = new System.Drawing.Size(775, 100);
             this.panel1.TabIndex = 23;
             // 
+            // lvTransaction
+            // 
+            this.lvTransaction.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.Item_Code,
+            this.Item_Name,
+            this.Unit_Price,
+            this.Quantity,
+            this.Discount,
+            this.Final_Price});
+            this.lvTransaction.FullRowSelect = true;
+            this.lvTransaction.GridLines = true;
+            this.lvTransaction.HideSelection = false;
+            this.lvTransaction.Location = new System.Drawing.Point(19, 106);
+            this.lvTransaction.Name = "lvTransaction";
+            this.lvTransaction.Size = new System.Drawing.Size(568, 273);
+            this.lvTransaction.TabIndex = 24;
+            this.lvTransaction.UseCompatibleStateImageBehavior = false;
+            this.lvTransaction.View = System.Windows.Forms.View.Details;
+            this.lvTransaction.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
+            // 
+            // Item_Code
+            // 
+            this.Item_Code.Text = "Item_Code";
+            this.Item_Code.Width = 100;
+            // 
+            // Item_Name
+            // 
+            this.Item_Name.Text = "Item_Name";
+            this.Item_Name.Width = 120;
+            // 
+            // Unit_Price
+            // 
+            this.Unit_Price.Text = "Unit_Price";
+            this.Unit_Price.Width = 100;
+            // 
+            // Quantity
+            // 
+            this.Quantity.Text = "Quantity";
+            this.Quantity.Width = 80;
+            // 
+            // Discount
+            // 
+            this.Discount.Text = "Discount";
+            // 
+            // Final_Price
+            // 
+            this.Final_Price.Text = "Final_Price";
+            this.Final_Price.Width = 100;
+            // 
             // frmTransaction
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -280,10 +273,10 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.SystemColors.GrayText;
             this.ClientSize = new System.Drawing.Size(770, 461);
+            this.Controls.Add(this.lvTransaction);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.dataGridViewTransaction);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnPayment);
             this.Controls.Add(this.btnRemove);
@@ -300,7 +293,6 @@
             this.Text = "Transaction";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmTransaction_FormClosed);
             this.Load += new System.EventHandler(this.frmTransaction_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTransaction)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -318,18 +310,17 @@
         private System.Windows.Forms.Button btnRemove;
         private System.Windows.Forms.Button btnPayment;
         private System.Windows.Forms.Button btnClose;
-        private System.Windows.Forms.DataGridView dataGridViewTransaction;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.ListView lvTransaction;
+        private System.Windows.Forms.ColumnHeader Item_Code;
+        private System.Windows.Forms.ColumnHeader Item_Name;
+        private System.Windows.Forms.ColumnHeader Unit_Price;
+        private System.Windows.Forms.ColumnHeader Quantity;
+        private System.Windows.Forms.ColumnHeader Discount;
+        private System.Windows.Forms.ColumnHeader Final_Price;
     }
 }

@@ -50,6 +50,11 @@ namespace POSsystem
             Calculate();
         }
 
+        private void frmTransactionPayment_Load(object sender, EventArgs e)
+        {
+
+        }
+
         private void checker(TextBox txtbox, string defaultValue)
         {
             if (txtbox.Text.Trim().Length == 0)

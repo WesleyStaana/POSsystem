@@ -32,7 +32,7 @@ namespace POSsystem
             cash = float.Parse(txtCash.Text);
             total = float.Parse(txtTotal.Text);
             change = Computation.getTotal(cash, total);
-
+            
             frmReceipt receipt = new frmReceipt();
             receipt.Show();
             this.Hide();
@@ -52,7 +52,23 @@ namespace POSsystem
 
         private void frmTransactionPayment_Load(object sender, EventArgs e)
         {
+            
+        }
 
+        private void txtTotal_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnSubmit.PerformClick();
+            }
+        }
+
+        private void txtCash_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnSubmit.PerformClick();
+            }
         }
 
         private void checker(TextBox txtbox, string defaultValue)
@@ -87,6 +103,10 @@ namespace POSsystem
             {
                 lblChange.Text = "0.00";
             }
+        }
+        public void setTxtTotal(string total)
+        {
+            txtTotal.Text = total;
         }
     }
 }

@@ -17,11 +17,6 @@ namespace POSsystem
             InitializeComponent();
         }
 
-        private void MaintenanceToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void userToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmUser user = new frmUser();
@@ -67,11 +62,6 @@ namespace POSsystem
         {
             lblTime.Text = DateTime.Now.ToLongTimeString();
             timer1.Start();
-        }
-
-        private void lblLogout_MouseHover(object sender, EventArgs e)
-        {
-            
         }
 
         private void lblLogout_Click(object sender, EventArgs e)

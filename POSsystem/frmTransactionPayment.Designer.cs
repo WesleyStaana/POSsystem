@@ -46,6 +46,7 @@
             this.txtTotal.TabIndex = 0;
             this.txtTotal.Text = "0.00";
             this.txtTotal.TextChanged += new System.EventHandler(this.txtTotal_TextChanged);
+            this.txtTotal.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtTotal_KeyDown);
             // 
             // txtCash
             // 
@@ -55,6 +56,7 @@
             this.txtCash.TabIndex = 1;
             this.txtCash.Text = "0.00";
             this.txtCash.TextChanged += new System.EventHandler(this.txtCash_TextChanged);
+            this.txtCash.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtCash_KeyDown);
             // 
             // label1
             // 

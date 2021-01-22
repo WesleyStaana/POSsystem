@@ -110,7 +110,6 @@
             this.lblQuantity.Size = new System.Drawing.Size(59, 16);
             this.lblQuantity.TabIndex = 3;
             this.lblQuantity.Text = "Quantity:";
-            this.lblQuantity.Click += new System.EventHandler(this.label6_Click);
             // 
             // lblUnitPrice
             // 
@@ -122,7 +121,6 @@
             this.lblUnitPrice.Size = new System.Drawing.Size(68, 16);
             this.lblUnitPrice.TabIndex = 3;
             this.lblUnitPrice.Text = "Unit Price:";
-            this.lblUnitPrice.Click += new System.EventHandler(this.label6_Click);
             // 
             // btnSave
             // 

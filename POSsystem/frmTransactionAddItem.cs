@@ -58,32 +58,32 @@ namespace POSsystem
 
             double actual_price = total - (total * less);
 
-            if (unit_price > 0 && quantity > 0 && discount > 0)
+            if (unit_price > 0 && quantity > 0 || discount > 0)
             {
                 lblTotalPrice.Text = Convert.ToString(actual_price);
             }
 
-            else if (unit_price > 0 && quantity > 0 && discount == 0)
+            else if (unit_price > 0 && quantity > 0 || discount == 0)
             {
                 lblTotalPrice.Text = "0.00";
             }
 
-            else if (unit_price > 0 && quantity == 0 && discount == 0)
+            else if (unit_price > 0 && quantity == 0 || discount == 0)
             {
                 lblTotalPrice.Text = "0.00";
             }
 
-            else if (unit_price == 0 && quantity > 0 && discount == 0)
+            else if (unit_price == 0 && quantity > 0 || discount == 0)
             {
                 lblTotalPrice.Text = "0.00";
             }
 
-            else if (unit_price == 0 && quantity == 0 && discount > 0)
+            else if (unit_price == 0 && quantity == 0 || discount > 0)
             {
                 lblTotalPrice.Text = "0.00";
             }
 
-            else if (unit_price == 0 && quantity == 0 && discount == 0)
+            else if (unit_price == 0 && quantity == 0 || discount == 0)
             {
                 lblTotalPrice.Text = "0.00";
             }
@@ -147,21 +147,10 @@ namespace POSsystem
             txtUnitPrice.Text = UnitPrice;
         }
 
-        public void setTxtQuantity(string Quantity)
-        {
-            txtQuantity.Text = Quantity;
-        }
-
-        public void setTxtDiscount(string Discount)
-        {
-            txtDiscount.Text = Discount;
-        }
-
         private void btnAddtoCart_Click(object sender, EventArgs e)
         {
             transact.addToCart(txtItemCode.Text, txtItemName.Text, txtUnitPrice.Text, txtQuantity.Text, txtDiscount.Text, lblTotalPrice.Text);
             this.Hide();
-
         }
     }
 }

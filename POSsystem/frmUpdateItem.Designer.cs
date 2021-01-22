@@ -202,7 +202,9 @@
             this.Controls.Add(this.lblItemName);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.MaximizeBox = false;
             this.Name = "frmUpdateItem";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmUpdateItem";
             this.Load += new System.EventHandler(this.frmUpdateItem_Load);
             this.ResumeLayout(false);

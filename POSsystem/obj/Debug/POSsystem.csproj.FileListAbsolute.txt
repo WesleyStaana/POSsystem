@@ -22,7 +22,6 @@ C:\Users\Maureen Quizon\Desktop\POSsystem\POSsystem\bin\Debug\POSsystem.pdb
 C:\Users\Maureen Quizon\Desktop\POSsystem\POSsystem\obj\Debug\POSsystem.csprojAssemblyReference.cache
 C:\Users\Maureen Quizon\Desktop\POSsystem\POSsystem\obj\Debug\POSsystem.frmItemAddItem.resources
 C:\Users\Maureen Quizon\Desktop\POSsystem\POSsystem\obj\Debug\POSsystem.frmItems.resources
-C:\Users\Maureen Quizon\Desktop\POSsystem\POSsystem\obj\Debug\POSsystem.Form2.resources
 C:\Users\Maureen Quizon\Desktop\POSsystem\POSsystem\obj\Debug\POSsystem.frmPosition.resources
 C:\Users\Maureen Quizon\Desktop\POSsystem\POSsystem\obj\Debug\POSsystem.frmReceipt.resources
 C:\Users\Maureen Quizon\Desktop\POSsystem\POSsystem\obj\Debug\POSsystem.frmStaff.resources
@@ -107,3 +106,5 @@ C:\Users\Maureen Quizon\Desktop\POSsystem\POSsystem\obj\Debug\POSsystem.frmStock
 C:\Users\Maureen Quizon\Desktop\POSsystem\POSsystem\obj\Debug\POSsystem.csproj.CopyComplete
 C:\Users\artou\source\repos\POSsystem\POSsystem\obj\Debug\POSsystem.frmUpdateStaff.resources
 C:\Users\artou\source\repos\POSsystem\POSsystem\obj\Debug\POSsystem.frmDashboard.resources
+C:\Users\Maureen Quizon\Desktop\POSsystem\POSsystem\obj\Debug\POSsystem.frmDashboard.resources
+C:\Users\Maureen Quizon\Desktop\POSsystem\POSsystem\obj\Debug\POSsystem.frmUpdateStaff.resources

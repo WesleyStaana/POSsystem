@@ -23,5 +23,11 @@ namespace POSsystem
             lblCash.Text = frmTransactionPayment.cash.ToString();
             lblChange.Text = frmTransactionPayment.change.ToString();
         }
+
+        private void frmReceipt_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            frmTransaction transact = new frmTransaction();
+            transact.Show();
+        }
     }
 }

@@ -14,14 +14,6 @@ namespace POSsystem
     
     public partial class frmTransaction : Form
     {
-        private frmTransactionAddItem transaction = null;
-
-        public void setItem(frmTransactionAddItem test)
-        {
-            transaction = test;
-        }
-
-        
         public frmTransaction()
         {
             InitializeComponent();
@@ -41,6 +33,8 @@ namespace POSsystem
         {
             frmTransactionPayment toPay = new frmTransactionPayment();
             toPay.Show();
+            toPay.setTxtTotal(lblTotal.Text);
+            this.Hide();
         }
 
         private void btnAddItem_Click(object sender, EventArgs e)
@@ -48,8 +42,6 @@ namespace POSsystem
             frmTransactionAddItem toAdd = new frmTransactionAddItem();
             toAdd.Show();
             toAdd.setTransact(this);
-            
-            
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -106,6 +98,19 @@ namespace POSsystem
             item.SubItems.Add(temp5);
             item.SubItems.Add(temp6);
             lvTransaction.Items.Add(item);
+            lblTotal.Text = temp6.ToString();
+        }
+
+        private void btnRemove_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < lvTransaction.Items.Count; i++)
+            {
+                if (lvTransaction.Items[i].Selected)
+                {
+                    lvTransaction.Items[i].Remove();
+                    i--;
+                }
+            }
         }
     }
 }

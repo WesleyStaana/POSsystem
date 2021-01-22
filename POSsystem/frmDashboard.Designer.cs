@@ -74,7 +74,6 @@
             this.MaintenanceToolStripMenuItem.Name = "MaintenanceToolStripMenuItem";
             this.MaintenanceToolStripMenuItem.Size = new System.Drawing.Size(88, 20);
             this.MaintenanceToolStripMenuItem.Text = "Maintenance";
-            this.MaintenanceToolStripMenuItem.Click += new System.EventHandler(this.MaintenanceToolStripMenuItem_Click);
             // 
             // userToolStripMenuItem
             // 
@@ -145,7 +144,6 @@
             this.lblLogout.TabIndex = 6;
             this.lblLogout.Text = "Logout";
             this.lblLogout.Click += new System.EventHandler(this.lblLogout_Click);
-            this.lblLogout.MouseHover += new System.EventHandler(this.lblLogout_MouseHover);
             // 
             // pictureBox2
             // 

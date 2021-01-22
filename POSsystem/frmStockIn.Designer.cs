@@ -88,7 +88,9 @@
             this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.txtQuantity);
             this.Controls.Add(this.label1);
+            this.MaximizeBox = false;
             this.Name = "frmStockIn";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "StockIn";
             this.Load += new System.EventHandler(this.frmStockIn_Load);
             this.ResumeLayout(false);

@@ -88,5 +88,10 @@ namespace POSsystem
         {
 
         }
+
+        private void cmbPosition_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -230,18 +230,17 @@
             this.lvTransaction.FullRowSelect = true;
             this.lvTransaction.GridLines = true;
             this.lvTransaction.HideSelection = false;
-            this.lvTransaction.Location = new System.Drawing.Point(19, 106);
+            this.lvTransaction.Location = new System.Drawing.Point(36, 121);
             this.lvTransaction.Name = "lvTransaction";
-            this.lvTransaction.Size = new System.Drawing.Size(568, 273);
+            this.lvTransaction.Size = new System.Drawing.Size(544, 262);
             this.lvTransaction.TabIndex = 24;
             this.lvTransaction.UseCompatibleStateImageBehavior = false;
             this.lvTransaction.View = System.Windows.Forms.View.Details;
-            this.lvTransaction.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
             // 
             // Item_Code
             // 
             this.Item_Code.Text = "Item_Code";
-            this.Item_Code.Width = 100;
+            this.Item_Code.Width = 80;
             // 
             // Item_Name
             // 
@@ -251,7 +250,7 @@
             // Unit_Price
             // 
             this.Unit_Price.Text = "Unit_Price";
-            this.Unit_Price.Width = 100;
+            this.Unit_Price.Width = 80;
             // 
             // Quantity
             // 
@@ -261,6 +260,7 @@
             // Discount
             // 
             this.Discount.Text = "Discount";
+            this.Discount.Width = 80;
             // 
             // Final_Price
             // 
@@ -316,12 +316,12 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.ListView lvTransaction;
         private System.Windows.Forms.ColumnHeader Item_Code;
         private System.Windows.Forms.ColumnHeader Item_Name;
         private System.Windows.Forms.ColumnHeader Unit_Price;
         private System.Windows.Forms.ColumnHeader Quantity;
         private System.Windows.Forms.ColumnHeader Discount;
         private System.Windows.Forms.ColumnHeader Final_Price;
-        public System.Windows.Forms.ListView lvTransaction;
     }
 }

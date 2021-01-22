@@ -7,8 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using MySql.Data;
-using MySql.Data.MySqlClient;
+
 
 namespace POSsystem
 {
@@ -22,7 +21,7 @@ namespace POSsystem
             transaction = test;
         }
 
-        private String connectionString = "SERVER=localhost;DATABASE=possystem_db;UID=root;PASSWORD=staana0522;charset=utf8;";
+        
         public frmTransaction()
         {
             InitializeComponent();
@@ -48,7 +47,8 @@ namespace POSsystem
         {
             frmTransactionAddItem toAdd = new frmTransactionAddItem();
             toAdd.Show();
-            this.loadItemList();
+            toAdd.setTransact(this);
+            
             
         }
 
@@ -63,7 +63,7 @@ namespace POSsystem
         {
             frmDashboard frm = new frmDashboard();
             frm.Show();
-            this.loadItemList();
+            
         }
 
         private void frmTransaction_Load(object sender, EventArgs e)
@@ -84,50 +84,28 @@ namespace POSsystem
 
         }
 
-        public void loadItemList()
-        {
-            MySqlConnection conn = new MySqlConnection(connectionString);
-            MySqlDataAdapter adapter = new MySqlDataAdapter();
-            MySqlCommand command = conn.CreateCommand();
-
-            command.CommandText = "SELECT * FROM items_tbl";
-
-            adapter.SelectCommand = command;
-
-            MySqlCommandBuilder commandBuilder = new MySqlCommandBuilder(adapter);
-
-            conn.Open();
-
-            DataSet dataSet = new DataSet();
-            adapter.Fill(dataSet, "items_tbl");
-            lvTransaction.Items.Clear();
-            for (int index = 0; index < dataSet.Tables[0].Rows.Count; index++)
-            {
-                lvTransaction.Items.Add(dataSet.Tables[0].Rows[index].ItemArray.GetValue(0).ToString());
-                lvTransaction.Items[index].SubItems.Add(dataSet.Tables[0].Rows[index].ItemArray.GetValue(1).ToString());
-                lvTransaction.Items[index].SubItems.Add(dataSet.Tables[0].Rows[index].ItemArray.GetValue(2).ToString());
-                lvTransaction.Items[index].SubItems.Add(dataSet.Tables[0].Rows[index].ItemArray.GetValue(3).ToString());
-                lvTransaction.Items[index].SubItems.Add(dataSet.Tables[0].Rows[index].ItemArray.GetValue(4).ToString());
-
-
-            }
-
-            conn.Close();
-        }
+       
 
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void setItemCode(string Code)
-        {
-            
-        }
-
+  
         private void btnNewTransaction_Click(object sender, EventArgs e)
         {
             lvTransaction.Items.Clear();
+        }
+
+        public void addToCart(string temp1, string temp2, string temp3, string temp4, string temp5, string temp6)
+        {
+            ListViewItem item = new ListViewItem(temp1);
+            item.SubItems.Add(temp2);
+            item.SubItems.Add(temp3);
+            item.SubItems.Add(temp4);
+            item.SubItems.Add(temp5);
+            item.SubItems.Add(temp6);
+            lvTransaction.Items.Add(item);
         }
     }
 }

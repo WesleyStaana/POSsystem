@@ -160,6 +160,7 @@
             this.lvPosition.TabIndex = 10;
             this.lvPosition.UseCompatibleStateImageBehavior = false;
             this.lvPosition.View = System.Windows.Forms.View.Details;
+            this.lvPosition.SelectedIndexChanged += new System.EventHandler(this.lvPosition_SelectedIndexChanged);
             // 
             // No
             // 

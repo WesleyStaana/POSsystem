@@ -19,31 +19,7 @@ namespace POSsystem
         public frmUpdateStaff()
         {
             InitializeComponent();
-            Fillcombobox();
-        }
-
-        void Fillcombobox() //Passing Database Value to Combobox
-        {
-            MySqlConnection conn = new MySqlConnection(connectionString);
-            MySqlDataAdapter adapter = new MySqlDataAdapter();
-            MySqlCommand command = conn.CreateCommand();
-
-            command.CommandText = "SELECT * FROM position_tbl";
-
-            adapter.SelectCommand = command;
-
-            MySqlCommandBuilder commandBuilder = new MySqlCommandBuilder(adapter);
-
-            conn.Open();
-
-            DataSet dataSet = new DataSet();
-            adapter.Fill(dataSet, "position_tbl");
-            for (int index = 0; index < dataSet.Tables[0].Rows.Count; index++)
-            {
-                cmbPosition.Items.Add(dataSet.Tables[0].Rows[index].ItemArray.GetValue(1).ToString());
-
-            }
-            conn.Close();
+           
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -103,6 +79,21 @@ namespace POSsystem
 
         private void frmUpdateStaff_Load(object sender, EventArgs e)
         {
+            MySqlConnection conn = new MySqlConnection(connectionString);
+            MySqlCommand command = conn.CreateCommand();
+            command.CommandText = "SELECT * FROM position_tbl";
+            MySqlDataReader dtreader;
+
+
+            conn.Open();
+            dtreader = command.ExecuteReader();
+            while (dtreader.Read())
+            {
+                string pname = dtreader.GetString(1);
+                cmbPosition.Items.Add(pname);
+
+            }
+            conn.Close();
             this.loadItemList();
         }
 

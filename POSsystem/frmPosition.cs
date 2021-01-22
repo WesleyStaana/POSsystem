@@ -48,7 +48,8 @@ namespace POSsystem
                 MySqlConnection conn = new MySqlConnection(connectionString);
                 MySqlCommand command = conn.CreateCommand();
                 command.CommandText = "INSERT INTO position_tbl(Position) VALUES (" +
-                    "'" + txtDescription.Text + "'" + ")";
+                    "'" + txtDescription.Text + "'" + 
+                    ")";
 
                 conn.Open();
 
@@ -148,6 +149,11 @@ namespace POSsystem
         {
             frmDashboard frm = new frmDashboard();
             frm.Show();
+        }
+
+        private void lvPosition_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

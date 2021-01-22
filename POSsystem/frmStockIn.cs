@@ -65,6 +65,5 @@ namespace POSsystem
 
             conn.Close();
         }
-
     }
 }

@@ -17,11 +17,11 @@ namespace POSsystem
     {
         private String connectionString = "SERVER=localhost;DATABASE=possystem_db;UID=root;PASSWORD=staana0522;charset=utf8;";
 
-        private frmTransaction listview = null;
+        private frmTransaction transact = null;
 
-        public void setItem(frmTransaction list)
+        public void setTransact(frmTransaction trans)
         {
-            listview = list;
+            transact = trans;
         }
 
 
@@ -159,17 +159,9 @@ namespace POSsystem
 
         private void btnAddtoCart_Click(object sender, EventArgs e)
         {
-           /* frmTransaction transaction = new frmTransaction();
-            ListViewItem item = new ListViewItem(txtItemCode.Text);
-            item.SubItems.Add(txtItemName.Text);
-            item.SubItems.Add(txtUnitPrice.Text);
-            item.SubItems.Add(txtQuantity.Text);
-            item.SubItems.Add(txtDiscount.Text);
-            item.SubItems.Add(lblTotalPrice.Text);
-            transaction.lvTransaction.Items.Add(item);
-            this.loadItemList();*/
-            
-            
+            transact.addToCart(txtItemCode.Text, txtItemName.Text, txtUnitPrice.Text, txtQuantity.Text, txtDiscount.Text, lblTotalPrice.Text);
+            this.Hide();
+
         }
     }
 }

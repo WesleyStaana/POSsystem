@@ -16,5 +16,11 @@ namespace POSsystem
         {
             InitializeComponent();
         }
+
+        private void frmKeyboard_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            frmDashboard frm = new frmDashboard();
+            frm.Show();
+        }
     }
 }

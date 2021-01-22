@@ -109,6 +109,11 @@ namespace POSsystem
             transaction.setTxtItemName(item.SubItems[1].Text);
             transaction.setTxtUnitPrice(item.SubItems[3].Text);
         }
+
+        private void frmItems_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            
+        }
     }
 }
 

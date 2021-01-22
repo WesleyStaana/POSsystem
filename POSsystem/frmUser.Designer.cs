@@ -151,6 +151,7 @@
             this.Name = "frmUser";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "User";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmUser_FormClosed);
             this.Load += new System.EventHandler(this.frmUser_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

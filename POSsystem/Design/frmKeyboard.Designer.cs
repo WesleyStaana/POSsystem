@@ -56,6 +56,7 @@
             this.Name = "frmKeyboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Keyboard";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmKeyboard_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 

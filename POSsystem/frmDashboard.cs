@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace POSsystem
 {
-    public partial class Form2 : Form
+    public partial class frmDashboard : Form
     {
-        public Form2()
+        public frmDashboard()
         {
             InitializeComponent();
         }
@@ -26,24 +26,28 @@ namespace POSsystem
         {
             frmUser user = new frmUser();
             user.Show();
+            this.Hide();
         }
 
         private void positionToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmPosition position = new frmPosition();
             position.Show();
+            this.Hide();
         }
 
         private void itemsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmItems items = new frmItems();
             items.Show();
+            this.Hide();
         }
 
         private void transactionToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmTransaction transact = new frmTransaction();
             transact.Show();
+            this.Hide();
         }
 
         private void Form2_FormClosed(object sender, FormClosedEventArgs e)
@@ -81,18 +85,21 @@ namespace POSsystem
         {
             frmMouse mouse = new frmMouse();
             mouse.Show();
+            this.Hide();
         }
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
             frmKeyboard keyboard = new frmKeyboard();
             keyboard.Show();
+            this.Hide();
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
             frmHeadset headset = new frmHeadset();
             headset.Show();
+            this.Hide();
         }
     }
 }

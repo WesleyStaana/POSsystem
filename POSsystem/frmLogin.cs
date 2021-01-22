@@ -30,8 +30,23 @@ namespace POSsystem
             if (username == "admin" && password == "admin")
             {
                 this.Hide();
-                Form2 f2 = new Form2();
+                frmDashboard f2 = new frmDashboard();
                 f2.Show();
+            }
+            else if (username == "cashier" && password == "cashier")
+            {
+                this.Hide();
+                frmTransaction transaction = new frmTransaction();
+                transaction.Show();
+                
+            }
+            else if (username != "cashier" && password == "cashier")
+            {
+                MessageBox.Show("Invalid username, please try again.");
+            }
+            else if (username == "cashier" && password != "cashier")
+            {
+                MessageBox.Show("Invalid password, please try again.");
             }
             else if (username != "admin" && password == "admin")
             {

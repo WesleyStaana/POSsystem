@@ -38,7 +38,7 @@ CREATE TABLE `items_tbl` (
 
 LOCK TABLES `items_tbl` WRITE;
 /*!40000 ALTER TABLE `items_tbl` DISABLE KEYS */;
-INSERT INTO `items_tbl` VALUES ('20001','Logitech G102','Gaming Mice',1000,'50'),('20002','Logitech G Pro','Gaming Headset',9000,'25'),('20003','Logitech Artic Pro','Gaming Headset',3000,'20'),('20004','Logitech G900','Gaming Streering Wheel',100000,'10'),('20005','Logitech G200','Light',1000,'20'),('20006','Logitech G Pro Keyboard','Gaming Keyboard',8900,'30'),('20007','Logitech G504','Gaming Wireless Mouse',2500,'20');
+INSERT INTO `items_tbl` VALUES ('20001','Logitech G102','Gaming Mice',1000,'50'),('20002','Logitech G Pro','Gaming Headset',9000,'25'),('20003','Logitech Artic Pro','Gaming Headset',3000,'20'),('20004','Logitech G900','Gaming Streering Wheel',100000,'10'),('20005','Logitech G200','Bright Light',1000,'20'),('20006','Logitech G Pro Keyboard','Gaming Keyboard',8900,'30'),('20007','Logitech G504','Gaming Wireless Mouse',2500,'20');
 /*!40000 ALTER TABLE `items_tbl` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -109,7 +109,7 @@ CREATE TABLE `user_tbl` (
   `Username` varchar(45) DEFAULT NULL,
   `Password` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`ID_No`)
-) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -118,7 +118,7 @@ CREATE TABLE `user_tbl` (
 
 LOCK TABLES `user_tbl` WRITE;
 /*!40000 ALTER TABLE `user_tbl` DISABLE KEYS */;
-INSERT INTO `user_tbl` VALUES (1,'Sta.Ana','Wesley','Contreras','admin','admin','admin'),(2,'Lim','Marcelo','Gomez','admin','admin','admin'),(3,'Abdul','Jabar','Agik','','Cashier','cashier'),(4,'Agik','Awit','Sad','','Bagger','bagger'),(5,'Kennedy','John','F','','Janitor','janitor'),(6,'Popoy','Basha','C','','Guard','guard'),(7,'sales','sales','sales','','Sales','sales'),(8,'brodie','brodie','brodie','','brodie','brodie'),(9,'test','test','test','','test','test'),(10,'test','test','test','Cashier','test','test'),(11,'test','test','test','Cashier','test','test'),(12,'qweq','qweq','qweq','qwe','qweqw','qweqw'),(13,'test','test','test','Bagger','test','test'),(14,'test','test','test','Bagger','test','test'),(15,'test','test','test','Cashier','test','test'),(16,'test','test','test','Cashier','test','test');
+INSERT INTO `user_tbl` VALUES (1,'Sta.Ana','Wesley','Contreras','admin','admin','admin'),(2,'Lim','Marcelo','Gomez','admin','admin','admin'),(3,'Abdul','Jabar','Agik','','Cashier','cashier'),(4,'Agik','Awit','Sad','','Bagger','bagger'),(5,'Kennedy','John','F','','Janitor','janitor'),(6,'Popoy','Basha','C','','Guard','guard'),(7,'sales','sales','sales','','Sales','sales'),(8,'brodie','brodie','brodie','','brodie','brodie'),(9,'test','test','test','','test','test'),(10,'test','test','test','Cashier','test','test'),(11,'test','test','test','Cashier','test','test'),(12,'qweq','qweq','qweq','qwe','qweqw','qweqw'),(13,'test','test','test','Bagger','test','test'),(14,'test','test','test','Bagger','test','test'),(15,'test','test','test','Cashier','test','test'),(16,'test','test','test','Cashier','test','test'),(17,'Sta.Ana','Wesley','Contreras','admin','admin','admin');
 /*!40000 ALTER TABLE `user_tbl` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -131,4 +131,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-01-21  2:02:17
+-- Dump completed on 2021-01-22 20:16:06

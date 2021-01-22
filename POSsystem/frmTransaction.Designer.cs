@@ -113,6 +113,7 @@
             this.btnNewTransaction.TabIndex = 13;
             this.btnNewTransaction.Text = "New Transaction";
             this.btnNewTransaction.UseVisualStyleBackColor = false;
+            this.btnNewTransaction.Click += new System.EventHandler(this.btnNewTransaction_Click);
             // 
             // btnAddItem
             // 
@@ -315,12 +316,12 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.ListView lvTransaction;
         private System.Windows.Forms.ColumnHeader Item_Code;
         private System.Windows.Forms.ColumnHeader Item_Name;
         private System.Windows.Forms.ColumnHeader Unit_Price;
         private System.Windows.Forms.ColumnHeader Quantity;
         private System.Windows.Forms.ColumnHeader Discount;
         private System.Windows.Forms.ColumnHeader Final_Price;
+        public System.Windows.Forms.ListView lvTransaction;
     }
 }

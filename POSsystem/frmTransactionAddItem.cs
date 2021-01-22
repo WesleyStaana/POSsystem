@@ -159,9 +159,17 @@ namespace POSsystem
 
         private void btnAddtoCart_Click(object sender, EventArgs e)
         {
-            ListViewItem item = new ListViewItem();
-            item.Text = txtItemCode.Text;
-            this.lvTransaction.Items.AddRange
+           /* frmTransaction transaction = new frmTransaction();
+            ListViewItem item = new ListViewItem(txtItemCode.Text);
+            item.SubItems.Add(txtItemName.Text);
+            item.SubItems.Add(txtUnitPrice.Text);
+            item.SubItems.Add(txtQuantity.Text);
+            item.SubItems.Add(txtDiscount.Text);
+            item.SubItems.Add(lblTotalPrice.Text);
+            transaction.lvTransaction.Items.Add(item);
+            this.loadItemList();*/
+            
+            
         }
     }
 }

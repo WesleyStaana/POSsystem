@@ -25,6 +25,8 @@ namespace POSsystem
 
         private void btnClose_Click(object sender, EventArgs e)
         {
+            frmDashboard frm = new frmDashboard();
+            frm.Show();
             this.Hide();
         }
 
@@ -140,6 +142,12 @@ namespace POSsystem
 
                 this.loadPositionList();
             }
+        }
+
+        private void frmPosition_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            frmDashboard frm = new frmDashboard();
+            frm.Show();
         }
     }
 }

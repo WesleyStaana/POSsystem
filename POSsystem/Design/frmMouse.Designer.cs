@@ -56,6 +56,7 @@
             this.Name = "frmMouse";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Mouse";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmMouse_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 

@@ -67,8 +67,15 @@ namespace POSsystem
         }
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            frmStaff frm = new frmStaff(lvUser.SelectedItems);
-            frm.ShowDialog();
+            frmUpdateStaff UpdateStaff = new frmUpdateStaff(lvUser.SelectedItems);
+            UpdateStaff.ShowDialog();
+            this.loadUserList();
+        }
+
+        private void frmUser_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            frmDashboard frm = new frmDashboard();
+            frm.Show();
         }
     }
 }

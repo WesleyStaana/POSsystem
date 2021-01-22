@@ -216,6 +216,7 @@
             this.Name = "frmItems";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Items";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmItems_FormClosed);
             this.Load += new System.EventHandler(this.frmItems_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

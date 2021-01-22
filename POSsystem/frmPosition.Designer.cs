@@ -192,6 +192,7 @@
             this.Name = "frmPosition";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Position";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmPosition_FormClosed);
             this.Load += new System.EventHandler(this.frmPosition_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

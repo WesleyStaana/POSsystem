@@ -12,6 +12,7 @@ using MySql.Data.MySqlClient;
 
 namespace POSsystem
 {
+    
     public partial class frmTransaction : Form
     {
         private frmTransactionAddItem transaction = null;
@@ -47,16 +48,21 @@ namespace POSsystem
         {
             frmTransactionAddItem toAdd = new frmTransactionAddItem();
             toAdd.Show();
+            this.loadItemList();
             
         }
 
         private void btnClose_Click(object sender, EventArgs e)
         {
+            frmDashboard frm = new frmDashboard();
+            frm.Show();
             this.Hide();
         }
 
         private void frmTransaction_FormClosed(object sender, FormClosedEventArgs e)
         {
+            frmDashboard frm = new frmDashboard();
+            frm.Show();
             this.loadItemList();
         }
 
@@ -119,5 +125,9 @@ namespace POSsystem
             
         }
 
+        private void btnNewTransaction_Click(object sender, EventArgs e)
+        {
+            lvTransaction.Items.Clear();
+        }
     }
 }

@@ -151,6 +151,8 @@ namespace POSsystem
         {
             transact.addToCart(txtItemCode.Text, txtItemName.Text, txtUnitPrice.Text, txtQuantity.Text, txtDiscount.Text, lblTotalPrice.Text);
             this.Hide();
+
+           
         }
     }
 }

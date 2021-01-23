@@ -12,9 +12,14 @@ using MySql.Data.MySqlClient;
 
 namespace POSsystem
 {
+    
+
     public partial class frmItems : Form
     {
+
         private frmTransactionAddItem transaction = null;
+        List<ListViewItem> allItems = new List<ListViewItem>();
+        
         public void setItem(frmTransactionAddItem test)
         {
             transaction = test;
@@ -25,10 +30,14 @@ namespace POSsystem
         {
             InitializeComponent();
             lvItems.Click += new System.EventHandler(lvItems_Click);
+            allItems.Clear();
+            allItems.AddRange(lvItems.Items.Cast<ListViewItem>());
+
         }
 
         private void frmItems_Load(object sender, EventArgs e)
         {
+            
             this.loadItemList();
         }
 
@@ -41,7 +50,7 @@ namespace POSsystem
 
         private void btnStockIn_Click(object sender, EventArgs e)
         {
-            frmStockIn stockIn = new frmStockIn();
+            frmStockIn stockIn = new frmStockIn(lvItems.SelectedItems);
             stockIn.ShowDialog();
             this.loadItemList();
         }
@@ -70,11 +79,23 @@ namespace POSsystem
                 lvItems.Items[index].SubItems.Add(dataSet.Tables[0].Rows[index].ItemArray.GetValue(2).ToString());
                 lvItems.Items[index].SubItems.Add(dataSet.Tables[0].Rows[index].ItemArray.GetValue(3).ToString());
                 lvItems.Items[index].SubItems.Add(dataSet.Tables[0].Rows[index].ItemArray.GetValue(4).ToString());
-                
-
             }
 
+
             conn.Close();
+
+            for(int i=0;i<lvItems.Items.Count;i++)
+            { 
+            int x = Convert.ToInt32(lvItems.Items[i].SubItems[4].Text);
+            if (x < 15)
+                lvItems.Items[i].BackColor = Color.Red;
+            else if (x <= 15)
+                lvItems.Items[i].BackColor = Color.Yellow;
+            else
+            {
+                lvItems.Items[i].BackColor = Color.Green;
+            }
+            }
         }
         private void lvItems_Click(Object sender, EventArgs e)
         {
@@ -115,6 +136,23 @@ namespace POSsystem
         {
             
         }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+               
+            if (txtSearch.Text == "")
+            {
+                lvItems.Items.AddRange(allItems.ToArray());
+                return;
+            }
+            var list = allItems.Cast<ListViewItem>()
+                                    .Where(x => x.SubItems.Cast<ListViewItem.ListViewSubItem>().Any(y => y.Text.Contains(txtSearch.Text)))
+                                     .ToArray();
+            lvItems.Items.Clear();
+            lvItems.Items.AddRange(list);
+            
+        }
+
     }
 }
 

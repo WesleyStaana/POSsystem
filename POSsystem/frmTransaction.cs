@@ -34,7 +34,10 @@ namespace POSsystem
             frmTransactionPayment toPay = new frmTransactionPayment();
             toPay.Show();
             toPay.setTxtTotal(lblTotal.Text);
+            toPay.setList(lvTransaction);
             this.Hide();
+
+
         }
 
         private void btnAddItem_Click(object sender, EventArgs e)
@@ -99,6 +102,8 @@ namespace POSsystem
             item.SubItems.Add(temp6);
             lvTransaction.Items.Add(item);
             lblTotal.Text = temp6.ToString();
+
+            computePrice();
         }
 
         private void btnRemove_Click(object sender, EventArgs e)
@@ -111,6 +116,19 @@ namespace POSsystem
                     i--;
                 }
             }
+            computePrice();
         }
+
+        public void computePrice()
+        {
+            double finalPrice = 0;
+            foreach (ListViewItem lastItem in lvTransaction.Items)
+            {
+                finalPrice += double.Parse(lastItem.SubItems[5].Text);
+            }
+
+            lblTotal.Text = Convert.ToString(finalPrice);
+        }
+
     }
 }

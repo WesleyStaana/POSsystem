@@ -27,10 +27,13 @@ namespace POSsystem
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
+            
+
             MySqlConnection conn = new MySqlConnection(connectionString);
             MySqlCommand command = conn.CreateCommand();
-            command.CommandText = "INSERT INTO items_tbl(Stocks_On_Hand) VALUES (" +
-                "'" + txtQuantity.Text + "'" + ")";
+            command.CommandText = "UPDATE items_tbl SET " +
+                "Stocks_On_Hand = '" + txtQuantity.Text + "'" +
+                "WHERE Item_Code= '" + lblItemCode.Text + "'";
 
             conn.Open();
 
@@ -65,5 +68,13 @@ namespace POSsystem
 
             conn.Close();
         }
+
+        public frmStockIn(ListView.SelectedListViewItemCollection info)
+        {
+            InitializeComponent();
+            lblItemCode.Text = info[0].Text;
+            
+        }
+
     }
 }

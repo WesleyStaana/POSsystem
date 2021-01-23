@@ -13,7 +13,7 @@ namespace POSsystem
     public partial class frmTransactionPayment : Form
     {
         public static float cash, total, change;
-
+        private ListView holder;
         public frmTransactionPayment()
         {
             InitializeComponent();
@@ -35,6 +35,7 @@ namespace POSsystem
             
             frmReceipt receipt = new frmReceipt();
             receipt.Show();
+            receipt.setReceipt(holder);
             this.Hide();
         }
 
@@ -107,6 +108,11 @@ namespace POSsystem
         public void setTxtTotal(string total)
         {
             txtTotal.Text = total;
+        }
+
+        public void setList(ListView list)
+        {
+            holder = list;
         }
     }
 }

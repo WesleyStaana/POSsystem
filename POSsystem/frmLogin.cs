@@ -10,33 +10,67 @@ using System.Windows.Forms;
 
 namespace POSsystem
 {
-    public partial class Form1 : Form
+    public partial class frmLogin : Form
     {
-        public Form1()
+        public frmLogin()
         {
             InitializeComponent();
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
             string username = txtUsername.Text;
             string password = txtPassword.Text;
-            
-            if (username == "admin" && password == "admin") {
+
+            if (username == "admin" && password == "admin")
+            {
                 this.Hide();
-                Form2 f2 = new Form2();
+                frmDashboard f2 = new frmDashboard();
                 f2.Show();
-             }
+            }
+            else if (username == "cashier" && password == "cashier")
+            {
+                this.Hide();
+                frmTransaction transaction = new frmTransaction();
+                transaction.Show();
+                
+            }
+            else if (username != "cashier" && password == "cashier")
+            {
+                MessageBox.Show("Invalid username, please try again.");
+            }
+            else if (username == "cashier" && password != "cashier")
+            {
+                MessageBox.Show("Invalid password, please try again.");
+            }
+            else if (username != "admin" && password == "admin")
+            {
+                MessageBox.Show("Invalid username, please try again.");
+            }
+            else if (username == "admin" && password != "admin")
+            {
+                MessageBox.Show("Invalid password, please try again.");
+            }
+            else
+            {
+                MessageBox.Show("Invalid input, please try again.");
+            }
         }
 
         private void txtPassword_KeyDown(object sender, KeyEventArgs e)
         {
-            btnLogin.PerformClick();
+            if (e.KeyCode == Keys.Enter)
+            { 
+                btnLogin.PerformClick();
+            }
+        }
+
+        private void txtUsername_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnLogin.PerformClick();
+            }
         }
     }
 }

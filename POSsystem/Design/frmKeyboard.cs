@@ -1,0 +1,26 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace POSsystem
+{
+    public partial class frmKeyboard : Form
+    {
+        public frmKeyboard()
+        {
+            InitializeComponent();
+        }
+
+        private void frmKeyboard_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            frmDashboard frm = new frmDashboard();
+            frm.Show();
+        }
+    }
+}

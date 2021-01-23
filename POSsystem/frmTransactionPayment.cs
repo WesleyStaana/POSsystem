@@ -12,29 +12,107 @@ namespace POSsystem
 {
     public partial class frmTransactionPayment : Form
     {
+        public static float cash, total, change;
+        private ListView holder;
         public frmTransactionPayment()
         {
             InitializeComponent();
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        public class Computation 
         {
-
+            public static float getTotal(float cash, float total)
+            {
+                return cash - total;
+            }
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void btnSubmit_Click(object sender, EventArgs e)
         {
-
+            cash = float.Parse(txtCash.Text);
+            total = float.Parse(txtTotal.Text);
+            change = Computation.getTotal(cash, total);
+            
+            frmReceipt receipt = new frmReceipt();
+            receipt.Show();
+            receipt.setReceipt(holder);
+            this.Hide();
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        private void txtTotal_TextChanged(object sender, EventArgs e)
         {
-
+            checker(txtTotal, "0.00");
+            Calculate();
         }
 
-        private void label3_Click(object sender, EventArgs e)
+        private void txtCash_TextChanged(object sender, EventArgs e)
         {
+            checker(txtCash, "0.00");
+            Calculate();
+        }
 
+        private void frmTransactionPayment_Load(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void txtTotal_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnSubmit.PerformClick();
+            }
+        }
+
+        private void txtCash_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnSubmit.PerformClick();
+            }
+        }
+
+        private void checker(TextBox txtbox, string defaultValue)
+        {
+            if (txtbox.Text.Trim().Length == 0)
+            {
+                txtbox.Text = defaultValue;
+            }
+        }
+
+        private void Calculate()
+        {
+            double total = Convert.ToDouble(txtTotal.Text);
+            double cash = Convert.ToDouble(txtCash.Text);
+
+            if (cash > 0 && total > 0)
+            {
+                lblChange.Text = Convert.ToString(cash - total);
+            }
+
+            else if (cash > 0 && total == 0)
+            {
+                lblChange.Text = "0.00";
+            }
+
+            else if (cash == 0 && total > 0)
+            {
+                lblChange.Text = "0.00";
+            }
+
+            else if (cash == 0 && total == 0)
+            {
+                lblChange.Text = "0.00";
+            }
+        }
+        public void setTxtTotal(string total)
+        {
+            txtTotal.Text = total;
+        }
+
+        public void setList(ListView list)
+        {
+            holder = list;
         }
     }
 }

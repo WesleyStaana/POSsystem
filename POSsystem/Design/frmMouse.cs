@@ -10,21 +10,17 @@ using System.Windows.Forms;
 
 namespace POSsystem
 {
-    public partial class frmCategory : Form
+    public partial class frmMouse : Form
     {
-        public frmCategory()
+        public frmMouse()
         {
             InitializeComponent();
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void frmMouse_FormClosed(object sender, FormClosedEventArgs e)
         {
-
-        }
-
-        private void btnClose_Click(object sender, EventArgs e)
-        {
-            this.Hide();
+            frmDashboard frm = new frmDashboard();
+            frm.Show();
         }
     }
 }
